@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream8K IPTV | Ultimate Multi-Server 4K/8K IPTV Subscription 2026</title>
+    <meta name="description" content="Stream8K IPTV offers 15 premium multi-server tiers with 4K/8K streaming, 99.9% uptime, and zero buffering. Customize your connection count and get instant pricing.">
+    <link rel="canonical" href="https://stream8k.tv/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Stream8K IPTV | Ultimate Multi-Server 4K/8K IPTV Subscription 2026">
+    <meta property="og:description" content="Stream8K IPTV offers 15 premium multi-server tiers with 4K/8K streaming. Customize your connection count and get instant pricing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stream8k.tv/">
+    <meta property="og:image" content="https://stream8k.tv/assets/og-image.jpg">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* ============================================================ */
+        /* 1. GLOBAL RESET & BASE STYLES                                 */
+        /* ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: #07070a;
+            color: #e2e8f0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #8B5CF6, #06B6D4);
+            border-radius: 9999px;
+        }
+        
+        /* ============================================================ */
+        /* 2. GLASSMORPHISM & CARD STYLES                               */
+        /* ============================================================ */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1.5rem;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(139, 92, 246, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .glass-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(139, 92, 246, 0.2);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(139, 92, 246, 0.05);
+        }
+        
+        .card-glow {
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(circle at 70% 30%, rgba(139, 92, 246, 0.04) 0%, transparent 70%);
+            pointer-events: none;
+            transition: all 0.8s ease;
+        }
+        .glass-card:hover .card-glow {
+            opacity: 0.6;
+            transform: scale(1.2);
+        }
+        
+        /* ============================================================ */
+        /* 3. SERVER LOGO / EMBLEM                                       */
+        /* ============================================================ */
+        .server-emblem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 1rem;
+            background: rgba(139, 92, 246, 0.06);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: #8B5CF6;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        .server-emblem svg {
+            width: 32px;
+            height: 32px;
+        }
+        .glass-card:hover .server-emblem {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: rgba(139, 92, 246, 0.2);
+        }
+        
+        /* ============================================================ */
+        /* 4. NEON BADGES & PILLS                                       */
+        /* ============================================================ */
+        .badge-neon {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.25rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            background: rgba(139, 92, 246, 0.06);
+            color: #a78bfa;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.05);
+        }
+        .badge-neon-cyan {
+            border-color: rgba(6, 182, 212, 0.2);
+            background: rgba(6, 182, 212, 0.06);
+            color: #67e8f9;
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.05);
+        }
+        .badge-neon-gold {
+            border-color: rgba(251, 191, 36, 0.25);
+            background: rgba(251, 191, 36, 0.08);
+            color: #fbbf24;
+            box-shadow: 0 0 30px rgba(251, 191, 36, 0.08);
+        }
+        .badge-best-seller {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.2rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #000;
+            box-shadow: 0 0 30px rgba(251, 191, 36, 0.2);
+        }
+        .badge-popular {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.2rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: linear-gradient(135deg, #8B5CF6, #06B6D4);
+            color: #fff;
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.2);
+        }
+        
+        /* ============================================================ */
+        /* 5. CONNECTION SELECTOR - INTERACTIVE                         */
+        /* ============================================================ */
+        .connection-selector {
+            display: inline-flex;
+            align-items: center;
+            gap: 0;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            overflow: hidden;
+        }
+        .connection-selector button {
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            padding: 0.4rem 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            min-width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .connection-selector button:hover {
+            background: rgba(139, 92, 246, 0.1);
+            color: #a78bfa;
+        }
+        .connection-selector button:active {
+            transform: scale(0.95);
+        }
+        .connection-selector .count-display {
+            padding: 0.4rem 1.2rem;
+            color: #e2e8f0;
+            font-weight: 700;
+            font-size: 1rem;
+            min-width: 50px;
+            text-align: center;
+            border-left: 1px solid rgba(255, 255, 255, 0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .connection-selector .conn-label {
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0 0.75rem 0 0.25rem;
+        }
+        .connection-selector.fixed {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .connection-selector.fixed button {
+            cursor: not-allowed;
+            opacity: 0.4;
+        }
+        .connection-selector.fixed .count-display {
+            color: #64748b;
+        }
+        
+        /* ============================================================ */
+        /* 6. PRICING GRID - UPDATES IN REAL-TIME                       */
+        /* ============================================================ */
+        .price-grid-horizontal {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .price-item-horizontal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.6rem 0.25rem;
+            border-radius: 0.75rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.3s ease;
+        }
+        .price-item-horizontal:hover {
+            background: rgba(139, 92, 246, 0.05);
+            border-color: rgba(139, 92, 246, 0.1);
+            transform: scale(1.02);
+        }
+        .price-item-horizontal .duration {
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .price-item-horizontal .amount {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #e2e8f0;
+            margin-top: 0.1rem;
+            transition: color 0.3s ease;
+        }
+        .price-item-horizontal .amount .currency {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #64748b;
+        }
+        .price-item-horizontal .savings-tag {
+            font-size: 0.5rem;
+            font-weight: 700;
+            color: #34d399;
+            background: rgba(52, 211, 153, 0.1);
+            padding: 0.05rem 0.5rem;
+            border-radius: 9999px;
+            margin-top: 0.1rem;
+        }
+        .price-item-horizontal .per-conn-price {
+            font-size: 0.55rem;
+            color: #64748b;
+            margin-top: 0.05rem;
+        }
+        
+        /* ============================================================ */
+        /* 7. CTA BUTTONS - MODERN STYLING                              */
+        /* ============================================================ */
+        .cta-btn-modern {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            min-width: 120px;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-btn-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .cta-btn-modern:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+        .cta-btn-modern:active {
+            transform: scale(0.98);
+        }
+        
+        .btn-whatsapp-modern {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            color: #fff;
+        }
+        .btn-whatsapp-modern:hover {
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.25);
+        }
+        .btn-telegram-modern {
+            background: linear-gradient(135deg, #0088cc, #006699);
+            color: #fff;
+        }
+        .btn-telegram-modern:hover {
+            box-shadow: 0 10px 40px rgba(0, 136, 204, 0.25);
+        }
+        .btn-trial-modern {
+            background: rgba(255, 255, 255, 0.04);
+            color: #e2e8f0;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .btn-trial-modern:hover {
+            background: rgba(139, 92, 246, 0.08);
+            border-color: rgba(139, 92, 246, 0.2);
+            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.05);
+        }
+        
+        /* ============================================================ */
+        /* 8. HERO SECTION                                              */
+        /* ============================================================ */
+        .hero-section {
+            background: radial-gradient(ellipse at 30% 20%, rgba(139, 92, 246, 0.04) 0%, rgba(6, 182, 212, 0.02) 40%, #07070a 70%);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: -20%;
+            width: 140%;
+            height: 140%;
+            background: radial-gradient(circle at 70% 50%, rgba(139, 92, 246, 0.03) 0%, transparent 60%);
+            animation: heroPulse 15s ease-in-out infinite alternate;
+        }
+        @keyframes heroPulse {
+            0% { transform: scale(1) rotate(0deg); opacity: 0.5; }
+            100% { transform: scale(1.1) rotate(5deg); opacity: 1; }
+        }
+        
+        /* ============================================================ */
+        /* 9. FOOTER BACKLINK SECTION                                   */
+        /* ============================================================ */
+        .footer-link {
+            color: #64748b;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .footer-link:hover {
+            color: #a78bfa;
+        }
+        
+        /* ============================================================ */
+        /* 10. RESPONSIVE ADJUSTMENTS                                   */
+        /* ============================================================ */
+        @media (max-width: 1024px) {
+            .price-grid-horizontal {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 640px) {
+            .price-grid-horizontal {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.3rem;
+            }
+            .price-item-horizontal .amount {
+                font-size: 0.95rem;
+            }
+            .cta-btn-modern {
+                min-width: 100%;
+                padding: 0.5rem 0.8rem;
+                font-size: 0.7rem;
+            }
+            .glass-card {
+                padding: 1.25rem;
+            }
+            .server-emblem {
+                width: 44px;
+                height: 44px;
+                font-size: 1rem;
+            }
+            .server-emblem svg {
+                width: 24px;
+                height: 24px;
+            }
+            .connection-selector button {
+                padding: 0.3rem 0.7rem;
+                min-width: 32px;
+            }
+            .connection-selector .count-display {
+                padding: 0.3rem 0.8rem;
+                min-width: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- HEADER / NAVIGATION                                           -->
+    <!-- ============================================================ -->
+    <header class="sticky top-0 z-50 bg-[#07070a]/90 backdrop-blur-xl border-b border-white/5">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20" aria-label="Main Navigation">
+            
+            <a href="/" class="flex items-center space-x-2 group">
+                <span class="text-2xl md:text-3xl font-extrabold tracking-tight">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4]">Stream</span>
+                    <span class="text-white">8K</span>
+                </span>
+                <span class="hidden md:inline-block text-[8px] font-bold uppercase tracking-[0.15em] text-[#8B5CF6] border border-[#8B5CF6]/20 px-2 py-0.5 rounded-full bg-[#8B5CF6]/5">Premium</span>
+            </a>
+
+            <ul class="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-400">
+                <li><a href="/" class="text-[#8B5CF6] border-b-2 border-[#8B5CF6] pb-1 hover:text-white transition">Home</a></li>
+                <li><a href="#servers" class="hover:text-white transition">Server Directory</a></li>
+                <li><a href="/setup-guide.html" class="hover:text-white transition">Setup Guides</a></li>
+                <li><a href="/channels.html" class="hover:text-white transition">Channels</a></li>
+                <li><a href="/reseller.html" class="hover:text-white transition">Reseller</a></li>
+                <li><a href="#contact" class="hover:text-white transition">Support</a></li>
+            </ul>
+
+            <div class="flex items-center space-x-4">
+                <a href="#servers" class="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] hover:from-[#7C3AED] hover:to-[#0891B2] text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-all shadow-lg shadow-[#8B5CF6]/20 hover:shadow-[#8B5CF6]/40">
+                    <i class="fas fa-rocket"></i>View Servers
+                </a>
+                <button id="mobile-menu-toggle" class="lg:hidden text-gray-400 hover:text-white text-2xl focus:outline-none transition" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="lg:hidden hidden bg-[#07070a]/95 border-t border-white/5 px-4 py-6 backdrop-blur-xl">
+            <ul class="flex flex-col space-y-4 text-center text-sm font-medium text-gray-400">
+                <li><a href="/" class="text-[#8B5CF6] block">Home</a></li>
+                <li><a href="#servers" class="hover:text-white block">Server Directory</a></li>
+                <li><a href="/setup-guide.html" class="hover:text-white block">Setup Guides</a></li>
+                <li><a href="/channels.html" class="hover:text-white block">Channels</a></li>
+                <li><a href="/reseller.html" class="hover:text-white block">Reseller</a></li>
+                <li><a href="#contact" class="hover:text-white block">Support</a></li>
+                <li class="pt-4"><a href="#servers" class="bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] text-white font-semibold px-6 py-3 rounded-full block">View Servers</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- MAIN CONTENT                                                  -->
+    <!-- ============================================================ -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero-section text-white py-24 md:py-32 relative">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-5xl">
+                <div class="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm text-[#8B5CF6] text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full border border-white/5 mb-6">
+                    <i class="fas fa-bolt text-[#06B6D4]"></i> 2026 Multi-Server Network
+                </div>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight">
+                    The Future of <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4]">IPTV Streaming</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 mt-6 max-w-3xl mx-auto leading-relaxed">
+                    Experience unparalleled 4K/8K streaming with <strong class="text-white">15 premium server tiers</strong>. 
+                    Customize your connections and get instant pricing.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#servers" class="inline-flex items-center gap-3 bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] hover:from-[#7C3AED] hover:to-[#0891B2] text-white font-bold px-8 py-4 rounded-full text-lg shadow-2xl shadow-[#8B5CF6]/20 hover:shadow-[#8B5CF6]/40 transition-all transform hover:scale-105">
+                        <i class="fas fa-rocket"></i> Explore All Servers
+                    </a>
+                    <a href="#contact" class="inline-flex items-center gap-3 bg-white/5 hover:bg-white/10 text-white font-medium px-8 py-4 rounded-full text-lg border border-white/10 transition-all">
+                        <i class="fas fa-headset"></i> Contact Support
+                    </a>
+                </div>
+                <div class="mt-10 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+                    <span class="flex items-center gap-2"><i class="fas fa-check-circle text-[#06B6D4]"></i> 99.9% Uptime</span>
+                    <span class="flex items-center gap-2"><i class="fas fa-check-circle text-[#06B6D4]"></i> Anti-Freeze Tech</span>
+                    <span class="flex items-center gap-2"><i class="fas fa-check-circle text-[#06B6D4]"></i> 25,000+ Channels</span>
+                    <span class="flex items-center gap-2"><i class="fas fa-check-circle text-[#06B6D4]"></i> 15 Server Tiers</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- SERVER DIRECTORY - 15 DYNAMIC INTERACTIVE CARDS              -->
+        <!-- ============================================================ -->
+        <section id="servers" class="py-20 md:py-28 bg-[#07070a]" aria-labelledby="servers-heading">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-[#8B5CF6] text-xs font-semibold tracking-widest uppercase">Premium Selection</span>
+                    <h2 id="servers-heading" class="text-3xl md:text-5xl font-bold text-white mt-2">
+                        Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4]">Server Directory</span>
+                    </h2>
+                    <p class="text-gray-400 mt-4 text-lg">
+                        Configure your perfect plan. Adjust connections and see prices update in real-time.
+                    </p>
+                </div>
+
+                <!-- Dynamic Server Cards Container -->
+                <div id="server-container" class="max-w-6xl mx-auto space-y-6">
+                    <!-- Servers will be rendered here by JavaScript -->
+                </div>
+
+                <!-- Trust Signals -->
+                <div class="max-w-5xl mx-auto mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="glass-card p-5 text-center border-white/5">
+                        <i class="fas fa-lock text-[#8B5CF6] text-2xl mb-2"></i>
+                        <p class="text-gray-400 text-sm">Secure Payments</p>
+                    </div>
+                    <div class="glass-card p-5 text-center border-white/5">
+                        <i class="fas fa-arrow-rotate-right text-[#06B6D4] text-2xl mb-2"></i>
+                        <p class="text-gray-400 text-sm">Instant Activation</p>
+                    </div>
+                    <div class="glass-card p-5 text-center border-white/5">
+                        <i class="fas fa-headset text-[#8B5CF6] text-2xl mb-2"></i>
+                        <p class="text-gray-400 text-sm">24/7 Support</p>
+                    </div>
+                    <div class="glass-card p-5 text-center border-white/5">
+                        <i class="fas fa-gem text-[#06B6D4] text-2xl mb-2"></i>
+                        <p class="text-gray-400 text-sm">Satisfaction Guaranteed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- CONTACT SECTION - TRIPLE CTA SYSTEM                         -->
+        <!-- ============================================================ -->
+        <section id="contact" class="py-20 md:py-28 bg-[#0a0a0f] border-y border-white/5" aria-labelledby="contact-heading">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-[#06B6D4] text-xs font-semibold tracking-widest uppercase">Get in Touch</span>
+                    <h2 id="contact-heading" class="text-3xl md:text-5xl font-bold text-white mt-2">
+                        Connect With <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4]">Stream8K</span>
+                    </h2>
+                    <p class="text-gray-400 mt-4 text-lg">
+                        Reach out through your preferred channel. We're here to help 24/7.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4">
+                    <a href="https://wa.me/YOUR_NUMBER" target="_blank" rel="noopener noreferrer" class="cta-btn-modern btn-whatsapp-modern w-full">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://t.me/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="cta-btn-modern btn-telegram-modern w-full">
+                        <i class="fab fa-telegram-plane text-xl"></i>
+                        <span>Telegram</span>
+                    </a>
+                    <a href="mailto:contact@stream8k.tv?subject=Free%20Trial%20Request" class="cta-btn-modern btn-trial-modern w-full">
+                        <i class="fas fa-play-circle text-xl text-[#8B5CF6]"></i>
+                        <span>Free Trial</span>
+                    </a>
+                </div>
+
+                <div class="text-center mt-6 text-gray-500 text-sm">
+                    <i class="fas fa-clock mr-2 text-[#8B5CF6]"></i> Response within 24 hours on all channels
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER - SAFE BACKLINK NETWORK                                -->
+    <!-- ============================================================ -->
+    <footer class="bg-[#07070a] border-t border-white/5 pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                
+                <div class="col-span-2 md:col-span-1">
+                    <a href="/" class="text-2xl font-extrabold">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4]">Stream</span>
+                        <span class="text-white">8K</span>
+                    </a>
+                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">The ultimate IPTV experience with multi-server stability and 4K/8K streaming.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" aria-label="Facebook" class="text-gray-600 hover:text-[#8B5CF6] transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter" class="text-gray-600 hover:text-[#8B5CF6] transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube" class="text-gray-600 hover:text-[#8B5CF6] transition"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Telegram" class="text-gray-600 hover:text-[#8B5CF6] transition"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Quick Links</h4>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="#servers" class="text-gray-500 hover:text-[#8B5CF6] transition">Server Directory</a></li>
+                        <li><a href="/setup-guide.html" class="text-gray-500 hover:text-[#8B5CF6] transition">Setup Guides</a></li>
+                        <li><a href="/channels.html" class="text-gray-500 hover:text-[#8B5CF6] transition">Channel List</a></li>
+                        <li><a href="/reseller.html" class="text-gray-500 hover:text-[#8B5CF6] transition">Reseller Program</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Support</h4>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="#faq-heading" class="text-gray-500 hover:text-[#8B5CF6] transition">FAQ</a></li>
+                        <li><a href="#contact" class="text-gray-500 hover:text-[#8B5CF6] transition">Contact Us</a></li>
+                        <li><a href="/privacy-policy.html" class="text-gray-500 hover:text-[#8B5CF6] transition">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service.html" class="text-gray-500 hover:text-[#8B5CF6] transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Authorized Network Partners -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Authorized Network Partners</h4>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li>
+                            <a href="https://premiumiptvpanels.com" rel="nofollow sponsored" target="_blank" class="footer-link">
+                                <i class="fas fa-external-link-alt text-[10px] text-[#8B5CF6]"></i>
+                                Premium IPTV Panels
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://d24kiptv.com" rel="nofollow sponsored" target="_blank" class="footer-link">
+                                <i class="fas fa-external-link-alt text-[10px] text-[#8B5CF6]"></i>
+                                D24K IPTV Network
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://site3.com" rel="nofollow sponsored" target="_blank" class="footer-link">
+                                <i class="fas fa-external-link-alt text-[10px] text-[#8B5CF6]"></i>
+                                IPTV Administration Tools
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://site4.com" rel="nofollow sponsored" target="_blank" class="footer-link">
+                                <i class="fas fa-external-link-alt text-[10px] text-[#8B5CF6]"></i>
+                                Multi-Server Management
+                            </a>
+                        </li>
+                        <li class="text-gray-700 text-xs pt-2 border-t border-white/5 mt-2">
+                            <i class="fas fa-shield-alt text-[#8B5CF6]/50 mr-1"></i> Trusted Partner Network
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-white/5 text-center text-sm text-gray-600">
+                <p>&copy; 2026 <a href="/" class="text-[#8B5CF6] hover:text-[#06B6D4] transition">Stream8K.tv</a>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- JAVASCRIPT - CENTRALIZED DATA & INTERACTIVE ENGINE            -->
+    <!-- ============================================================ -->
+    <script>
+        // =============================================================
+        // 1. CENTRALIZED DATA CONFIGURATION (Single Source of Truth)
+        //    Edit prices, connections, or content here in ONE place.
+        // =============================================================
+        const serversData = [
+            {
+                id: '8k-ultra',
+                name: '8K ULTRA SERVER',
+                logoType: '8K',
+                accentColor: 'violet',
+                maxConnectionsAllowed: 1,
+                isFixedConnection: true,
+                channels: '25,000+',
+                movies: '120,000+',
+                series: '30,000+',
+                isBestSeller: false,
+                isPopular: false,
+                basePrices: {
+                    m1: 19.99,
+                    m3: 49.99,
+                    m6: 79.99,
+                    m12: 129.99
+                }
+            },
+            {
+                id: 'crystal-ott',
+                name: 'CRYSTAL OTT SERVER',
+                logoType: 'CR',
+                accentColor: 'cyan',
+                maxConnectionsAllowed: 2,
+                isFixedConnection: false,
+                channels: '23,000+',
+                movies: '110,000+',
+                series: '28,000+',
+                isBestSeller: false,
+                isPopular: false,
+                basePrices: {
+                    m1: 13.99,
+                    m3: 34.99,
+                    m6: 55.99,
+                    m12: 94.99
+                }
+            },
+            {
+                id: 'gold',
+                name: 'GOLD SERVER',
+                logoType: '★',
+                accentColor: 'amber',
+                maxConnectionsAllowed: 5,
+                isFixedConnection: false,
+                channels: '22,000+',
+                movies: '100,000+',
+                series: '25,000+',
+                isBestSeller: true,
+                isPopular: false,
+                basePrices: {
+                    m1: 14.99,
+                    m3: 36.99,
+                    m6: 59.99,
+                    m12: 99.99
+                }
+            },
+            {
+                id: 'cobra',
+                name: 'COBRA IPTV SERVER',
+                logoType: '🐍',
+                accentColor: 'emerald',
+                maxConnectionsAllowed: 1,
+                isFixedConnection: true,
+                channels: '20,000+',
+                movies: '90,000+',
+                series: '22,000+',
+                isBestSeller: false,
+                isPopular: false,
+                basePrices: {
+                    m1: 9.99,
+                    m3: 24.99,
+                    m6: 42.99,
+                    m12: 69.99
+                }
+            },
+            {
+                id: 'premium',
+                name: 'PREMIUM SERVER',
+                logoType: 'P',
+                accentColor: 'indigo',
+                maxConnectionsAllowed: 1,
+                isFixedConnection: true,
+                channels: '18,000+',
+                movies: '80,000+',
+                series: '20,000+',
+                isBestSeller: false,
+                isPopular: true,
+                basePrices: {
+                    m1: 10.99,
+                    m3: 26.99,
+                    m6: 45.99,
+                    m12: 79.99
+                }
+            },
+            {
+                id: 'magnum-ott',
+                name: 'MAGNUM OTT SERVER',
+                logoType: 'MG',
+                accentColor: 'rose',
+                maxConnectionsAllowed: 2,
+                isFixedConnection: false,
+                channels: '19,000+',
+                movies: '85,000+',
+                series: '21,000+',
+                isBestSeller: false,
+                isPopular: false,
+                basePrices: {
+                    m1: 12.99,
+                    m3: 31.99,
+                    m6: 52.99,
+                    m12: 89.99
+                }
+            },
+            {
+                id: 'mega',
+                name: 'MEGA SERVER',
+                logoType: 'M',
+                accentColor: 'orange',
+                maxConnectionsAllowed: 3,
+                isFixedConnection: false,
+                channels: '16,000+',
+                movies: '70,000+',
+                series: '18,000+',
+                isBestSeller: false,
+                isPopular: false,
+                basePrices: {
+                    m1: 9.99,
+                    m3: 24.99,
+                    m6: 42.99,
+                    m12: 69.99
+                }
+            },
+            {
+                id: '4k-ott',
+                name: '4K OTT SERVER',
+                logoType: '4K',
+                accentColor: 'cyan',
+                maxConnectionsAllowed: 1,
+                isFixedConnection: true,
+                channels: '21,000+',
+                movies: '95,000+',
+                series: '24,000+',
+                isBestSeller: false,
+                isPopular: false,
+                basePrices: {
+                    m1: 15.99,
+                    m3: 39.99,
+                    m6: 64.99,
+                    m12: 109.99
+                }
+            },
+            {
+                id: 'dino',
+                name: 'DINO SERVER',
+                logoType: '🦕',
+                accentColor: 'green',
+                maxConnectionsAllowed: 1,
+                isFixedConnection: true,
+                channels: '15,000+',
+                movies: '60,000+',
+                series: '15,000+',
+                isBestSeller: false,
+                isPopular: false,
+                basePrices: {
+                    m1: 5.99,
+                    m3: 14.99,
+                    m6: 24.99,
+                    m12: 44.99
+                }
+            },
+            {
+                id: 'lion',
+                name: 'LION SERVER',
+                logoType: '🦁',
+                accentColor: 'yellow',
+                maxConnectionsAllowed: 1,
+                isFixedConnection: true,
+                channels: '14,000+',
+                movies: '55,000+',
+                series: '14,000+',
+                isBestSeller: false,
+                isPopular: false,
+                basePrices: {
+                    m1: 6.99,
+                    m3: 16.99,
+                    m6: 28.99,
+                    m12: 49.99
+                }
+            },
+            {
+                id: 'xtreme-hd',
+                name: 'XTREME HD SERVER',
+                logoType: 'X',
+                accentColor: 'red',
+                maxConnectionsAllowed: 1,
+                isFixedConnection: true,
+                channels: '17,000+',
+                movies: '75,000+',
+                series: '19,000+',
+                isBestSeller: false,
+                isPopular: false,
+                basePrices: {
+                    m1: 11.49,
+                    m3: 28.99,
+                    m6: 47.99,
+                    m12: 82.99
+                }
+            },
+            {
+                id: 'nexon',
+                name: 'NEXON SERVER',
+                logoType: 'NX',
+                accentColor: 'teal',
+                maxConnectionsAllowed: 1,
+                isFixedConnection: true,
+                channels: '12,000+',
+                movies: '50,000+',
+                series: '12,000+',
+                isBestSeller: false,
+                isPopular: false,
+                basePrices: {
+                    m1: 7.49,
+                    m3: 18.99,
+                    m6: 31.99,
+                    m12: 54.99
+                }
+            },
+            {
+                id: 'ultra',
+                name: 'ULTRA SERVER',
+                logoType: 'U',
+                accentColor: 'fuchsia',
+                maxConnectionsAllowed: 1,
+                isFixedConnection: true,
+                channels: '15,000+',
+                movies: '65,000+',
+                series: '16,000+',
+                isBestSeller: false,
+                isPopular: false,
+                basePrices: {
+                    m1: 8.99,
+                    m3: 21.99,
+                    m6: 37.99,
+                    m12: 64.99
+                }
+            },
+            {
+                id: 'dream',
+                name: 'DREAM SERVER',
+                logoType: '✨',
+                accentColor: 'pink',
+                maxConnectionsAllowed: 1,
+                isFixedConnection: true,
+                channels: '13,000+',
+                movies: '45,000+',
+                series: '11,000+',
+                isBestSeller: false,
+                isPopular: false,
+                basePrices: {
+                    m1: 6.50,
+                    m3: 15.99,
+                    m6: 26.99,
+                    m12: 47.99
+                }
+            },
+            {
+                id: 'trex',
+                name: 'TREX SERVER',
+                logoType: '🦖',
+                accentColor: 'lime',
+                maxConnectionsAllowed: 1,
+                isFixedConnection: true,
+                channels: '20,000+',
+                movies: '95,000+',
+                series: '23,000+',
+                isBestSeller: false,
+                isPopular: false,
+                basePrices: {
+                    m1: 11.99,
+                    m3: 29.99,
+                    m6: 49.99,
+                    m12: 84.99
+                }
+            }
+        ];
+
+        // =============================================================
+        // 2. PRICING ENGINE - Calculates price based on connections
+        // =============================================================
+        const EXTRA_CONNECTION_COST = 2.00; // $2.00 per extra connection per month
+
+        function calculatePrice(basePrice, connections) {
+            // Base price is for 1 connection
+            const extraConnections = Math.max(0, connections - 1);
+            return basePrice + (extraConnections * EXTRA_CONNECTION_COST);
+        }
+
+        // =============================================================
+        // 3. RENDER ENGINE - Builds interactive cards from data
+        // =============================================================
+        function renderServers() {
+            const container = document.getElementById('server-container');
+            if (!container) return;
+
+            let html = '';
+
+            serversData.forEach((server) => {
+                // Determine badge
+                let badgeHtml = '';
+                if (server.isBestSeller) {
+                    badgeHtml = `<span class="badge-best-seller"><i class="fas fa-crown"></i> Best Seller & Multi-Room</span>`;
+                } else if (server.isPopular) {
+                    badgeHtml = `<span class="badge-popular"><i class="fas fa-star"></i> Most Popular</span>`;
+                }
+
+                // Connection badge style based on max connections
+                let connectionBadgeClass = 'badge-neon';
+                if (server.maxConnectionsAllowed >= 5) {
+                    connectionBadgeClass = 'badge-neon badge-neon-gold';
+                } else if (server.maxConnectionsAllowed >= 3) {
+                    connectionBadgeClass = 'badge-neon badge-neon-cyan';
+                }
+
+                // Build price items with data attributes for JS updates
+                const durations = ['m1', 'm3', 'm6', 'm12'];
+                const durationLabels = ['1M', '3M', '6M', '12M'];
+                const savingsMap = {
+                    'm3': 'Save 15%',
+                    'm6': 'Save 25%',
+                    'm12': 'Save 40%'
+                };
+                
+                let priceHtml = '';
+                durations.forEach((dur, index) => {
+                    const basePrice = server.basePrices[dur];
+                    const label = durationLabels[index];
+                    const savings = savingsMap[dur] || '';
+                    // We'll use data attributes to store base price for JS updates
+                    priceHtml += `
+                        <div class="price-item-horizontal" data-duration="${dur}" data-base-price="${basePrice}">
+                            <span class="duration">${label}</span>
+                            <span class="amount" id="price-${server.id}-${dur}">
+                                <span class="currency">$</span>${basePrice.toFixed(2)}
+                            </span>
+                            ${savings ? `<span class="savings-tag">${savings}</span>` : ''}
+                            <span class="per-conn-price" id="perconn-${server.id}-${dur}">
+                                $${EXTRA_CONNECTION_COST.toFixed(2)}/extra conn
+                            </span>
+                        </div>
+                    `;
+                });
+
+                // Build connection selector - disabled if fixed connection
+                const isFixed = server.isFixedConnection || server.maxConnectionsAllowed === 1;
+                const selectorDisabled = isFixed ? 'fixed' : '';
+                const maxConn = server.maxConnectionsAllowed;
+                const defaultConn = isFixed ? 1 : 1;
+                const connDisplay = isFixed ? 'Fixed 1 Device' : `${defaultConn} / ${maxConn}`;
+
+                // Build CTA buttons with dynamic connection data
+                const serverName = server.name;
+                const baseMessage = `Hi Stream8K, I'm interested in the ${serverName}.`;
+
+                html += `
+                    <div class="glass-card p-6 md:p-8" id="server-${server.id}" data-server-id="${server.id}" data-max-connections="${maxConn}" data-is-fixed="${isFixed}">
+                        <div class="card-glow"></div>
+                        
+                        <!-- Header with Logo -->
+                        <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                            <div class="flex items-center gap-4">
+                                <div class="server-emblem">
+                                    <span style="font-size:1.4rem;">${server.logoType}</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-3 flex-wrap">
+                                        <h3 class="text-xl md:text-2xl font-bold text-white tracking-tight">${server.name}</h3>
+                                        ${badgeHtml}
+                                    </div>
+                                    <div class="flex flex-wrap items-center gap-3 mt-2">
+                                        <span class="${connectionBadgeClass}">
+                                            <i class="fas fa-users"></i> ${maxConn} ${maxConn > 1 ? 'Max Connections' : 'Connection'}
+                                        </span>
+                                        <span class="badge-neon badge-neon-cyan">
+                                            <i class="fas fa-tv"></i> ${server.channels} Channels
+                                        </span>
+                                        <span class="badge-neon badge-neon-cyan">
+                                            <i class="fas fa-film"></i> ${server.movies} Movies
+                                        </span>
+                                        <span class="badge-neon badge-neon-cyan">
+                                            <i class="fas fa-clapperboard"></i> ${server.series} Series
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Connection Selector -->
+                        <div class="flex flex-wrap items-center gap-4 mb-2">
+                            <div class="connection-selector ${selectorDisabled}" data-server-id="${server.id}">
+                                <button class="conn-decrement" ${isFixed ? 'disabled' : ''} aria-label="Decrease connections">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <span class="count-display" id="conn-count-${server.id}">${defaultConn}</span>
+                                <button class="conn-increment" ${isFixed ? 'disabled' : ''} aria-label="Increase connections">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                                <span class="conn-label">${isFixed ? 'Fixed 1 Device' : `${maxConn} Max`}</span>
+                            </div>
+                            ${isFixed ? `<span class="text-xs text-gray-500"><i class="fas fa-lock mr-1"></i>Fixed single connection</span>` : `<span class="text-xs text-gray-500"><i class="fas fa-arrows-up-down mr-1"></i>${EXTRA_CONNECTION_COST.toFixed(2)}/extra conn/mo</span>`}
+                        </div>
+
+                        <!-- Pricing Grid - Updates in Real-Time -->
+                        <div class="price-grid-horizontal" id="prices-${server.id}">
+                            ${priceHtml}
+                        </div>
+
+                        <!-- Triple CTA System with Dynamic Messages -->
+                        <div class="flex flex-wrap gap-3 mt-6">
+                            <a href="#" class="cta-btn-modern btn-whatsapp-modern flex-1 min-w-[120px] whatsapp-link" data-server="${server.id}" data-name="${server.name}">
+                                <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                            </a>
+                            <a href="#" class="cta-btn-modern btn-telegram-modern flex-1 min-w-[120px] telegram-link" data-server="${server.id}" data-name="${server.name}">
+                                <i class="fab fa-telegram-plane"></i> Order via Telegram
+                            </a>
+                            <a href="#" class="cta-btn-modern btn-trial-modern flex-1 min-w-[120px] trial-link" data-server="${server.id}" data-name="${server.name}">
+                                <i class="fas fa-play-circle"></i> Request 24H Free Trial
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+
+            // =============================================================
+            // 4. INITIALIZE INTERACTIVE COMPONENTS
+            // =============================================================
+            initializeConnectionSelectors();
+            initializeCTALinks();
+        }
+
+        // =============================================================
+        // 5. CONNECTION SELECTOR LOGIC
+        // =============================================================
+        function initializeConnectionSelectors() {
+            document.querySelectorAll('.connection-selector').forEach(selector => {
+                const serverId = selector.dataset.serverId;
+                const maxConn = parseInt(selector.closest('.glass-card').dataset.maxConnections);
+                const isFixed = selector.closest('.glass-card').dataset.isFixed === 'true';
+                
+                if (isFixed) return;
+
+                const countDisplay = document.getElementById(`conn-count-${serverId}`);
+                const decrementBtn = selector.querySelector('.conn-decrement');
+                const incrementBtn = selector.querySelector('.conn-increment');
+
+                let currentCount = 1;
+
+                function updateConnections(newCount) {
+                    if (newCount < 1 || newCount > maxConn) return;
+                    currentCount = newCount;
+                    countDisplay.textContent = currentCount;
+                    updatePrices(serverId, currentCount);
+                    updateCTALinks(serverId, currentCount);
+                }
+
+                decrementBtn.addEventListener('click', () => updateConnections(currentCount - 1));
+                incrementBtn.addEventListener('click', () => updateConnections(currentCount + 1));
+
+                // Initialize with 1 connection
+                updateConnections(1);
+            });
+        }
+
+        // =============================================================
+        // 6. PRICE UPDATE ENGINE - Recalculates all prices in real-time
+        // =============================================================
+        function updatePrices(serverId, connections) {
+            const server = serversData.find(s => s.id === serverId);
+            if (!server) return;
+
+            const durations = ['m1', 'm3', 'm6', 'm12'];
+            durations.forEach(dur => {
+                const basePrice = server.basePrices[dur];
+                const calculatedPrice = calculatePrice(basePrice, connections);
+                const priceElement = document.getElementById(`price-${serverId}-${dur}`);
+                if (priceElement) {
+                    const currencySpan = priceElement.querySelector('.currency');
+                    priceElement.innerHTML = `<span class="currency">$</span>${calculatedPrice.toFixed(2)}`;
+                }
+            });
+        }
+
+        // =============================================================
+        // 7. CTA LINK UPDATER - Adds connection count to messages
+        // =============================================================
+        function updateCTALinks(serverId, connections) {
+            const server = serversData.find(s => s.id === serverId);
+            if (!server) return;
+
+            // Find the best duration to highlight (we'll use 12M as default for the link)
+            const bestDuration = '12M';
+            const bestPrice = calculatePrice(server.basePrices['m12'], connections);
+            
+            const card = document.querySelector(`#server-${serverId}`);
+            if (!card) return;
+
+            const whatsappLink = card.querySelector('.whatsapp-link');
+            const telegramLink = card.querySelector('.telegram-link');
+            const trialLink = card.querySelector('.trial-link');
+
+            const baseMessage = `Hi Stream8K, I'm interested in the ${server.name} with ${connections} connection${connections > 1 ? 's' : ''}.`;
+
+            if (whatsappLink) {
+                whatsappLink.href = `https://wa.me/YOUR_NUMBER?text=${encodeURIComponent(baseMessage)}`;
+            }
+            if (telegramLink) {
+                telegramLink.href = `https://t.me/YOUR_USERNAME?text=${encodeURIComponent(baseMessage)}`;
+            }
+            if (trialLink) {
+                trialLink.href = `mailto:contact@stream8k.tv?subject=Free%20Trial%20Request%20-%20${encodeURIComponent(server.name)}&body=${encodeURIComponent(baseMessage + ' Please send me the trial details.')}`;
+            }
+        }
+
+        // =============================================================
+        // 8. INITIALIZE CTA LINKS
+        // =============================================================
+        function initializeCTALinks() {
+            document.querySelectorAll('.whatsapp-link, .telegram-link, .trial-link').forEach(link => {
+                const serverId = link.dataset.server;
+                const connections = parseInt(document.getElementById(`conn-count-${serverId}`)?.textContent || '1');
+                updateCTALinks(serverId, connections);
+            });
+        }
+
+        // =============================================================
+        // 9. MOBILE MENU TOGGLE
+        // =============================================================
+        const toggleBtn = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (toggleBtn && mobileMenu) {
+            toggleBtn.addEventListener('click', function() {
+                const isOpen = mobileMenu.classList.toggle('hidden');
+                this.setAttribute('aria-expanded', !isOpen);
+                const icon = this.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                }
+            });
+        }
+
+        // =============================================================
+        // 10. SMOOTH SCROLL FOR ANCHOR LINKS
+        // =============================================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== "#" && href.length > 1 && !href.includes('checkout') && !href.includes('wa.me') && !href.includes('t.me') && !href.includes('mailto')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
+        // =============================================================
+        // 11. INITIALIZATION
+        // =============================================================
+        document.addEventListener('DOMContentLoaded', function() {
+            renderServers();
+            console.log('🚀 Stream8K.tv - Interactive Checkout Configurator Loaded');
+            console.log(`📊 ${serversData.length} Server Tiers Rendered with Connection Selectors`);
+            console.log('🎨 Design System: Cyber Violet (#8B5CF6) & Electric Cyan (#06B6D4)');
+            console.log('⚡ Pricing Formula: Base + $2.00 per extra connection per month');
+            console.log('🔗 Authorized Network Partners (Safe Backlinks) Active');
+        });
+    </script>
+
+</body>
+</html>
