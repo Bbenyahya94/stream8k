@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Stream8K IPTV | #1 Premium IPTV Subscription Service 2026 - 4K/8K Streaming</title>
     <meta name="description" content="Stream8K offers the best IPTV subscription with 15 premium servers, 500,000+ channels & VOD. 4K/8K streaming, anti-freeze technology, 99.9% uptime. Free trial available.">
     <meta name="keywords" content="IPTV subscription, best IPTV service, premium IPTV, 4K IPTV, 8K IPTV, IPTV reseller, IPTV panels, streaming service">
@@ -15,12 +15,7 @@
     <meta property="og:url" content="https://stream8k.tv/">
     <meta property="og:image" content="https://stream8k.tv/assets/og-image.jpg">
     
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Stream8K IPTV | #1 Premium IPTV Subscription Service 2026">
-    <meta name="twitter:description" content="Stream8K offers the best IPTV subscription with 15 premium servers, 500,000+ channels & VOD.">
-    
-    <!-- Schema Markup - Organization -->
+    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -32,53 +27,43 @@
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+212670969291",
-            "contactType": "sales",
-            "availableLanguage": ["English", "Arabic", "French"]
-        },
-        "sameAs": [
-            "https://www.facebook.com/stream8k",
-            "https://twitter.com/stream8k",
-            "https://t.me/stream8k"
-        ]
-    }
-    </script>
-    
-    <!-- Schema Markup - Product (Main Offering) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Stream8K IPTV Premium Subscription",
-        "description": "Premium IPTV subscription with 15 servers, 500,000+ channels, 4K/8K streaming, and anti-freeze technology.",
-        "brand": {
-            "@type": "Brand",
-            "name": "Stream8K"
-        },
-        "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "USD",
-            "lowPrice": "5.99",
-            "highPrice": "19.99",
-            "offerCount": "15"
+            "contactType": "sales"
         }
     }
     </script>
 
-    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <!-- Three.js via CDN -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.128.0/build/three.module.js"
+        }
+    }
+    </script>
+
     <style>
-        /* --- Global & Reset --- */
+        /* ============================================================ */
+        /* GLOBAL STYLES                                                 */
+        /* ============================================================ */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { background: #07070a; color: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+        body {
+            background: #07070a;
+            color: #e2e8f0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+        }
         ::-webkit-scrollbar { width: 6px; height: 6px; }
         ::-webkit-scrollbar-track { background: #0a0a0f; }
         ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #8B5CF6, #06B6D4); border-radius: 9999px; }
 
-        /* --- Glassmorphism Card --- */
+        /* ============================================================ */
+        /* GLASSMORPHISM CARDS                                          */
+        /* ============================================================ */
         .glass-card {
             background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(20px);
@@ -88,75 +73,465 @@
             position: relative;
             overflow: hidden;
         }
-        .glass-card:hover { transform: translateY(-6px); border-color: rgba(139, 92, 246, 0.25); box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
-        .glass-card .card-glow { position: absolute; top: -50%; right: -30%; width: 80%; height: 80%; background: radial-gradient(circle at 70% 30%, rgba(139,92,246,0.04) 0%, transparent 70%); pointer-events: none; transition: all 0.8s ease; }
+        .glass-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(139, 92, 246, 0.25);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+        }
+        .glass-card .card-glow {
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(circle at 70% 30%, rgba(139,92,246,0.04) 0%, transparent 70%);
+            pointer-events: none;
+            transition: all 0.8s ease;
+        }
         .glass-card:hover .card-glow { opacity: 0.6; transform: scale(1.2); }
 
-        /* --- Badges --- */
-        .badge-neon { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.75rem; border-radius: 9999px; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid rgba(139,92,246,0.2); background: rgba(139,92,246,0.06); color: #a78bfa; }
-        .badge-neon-cyan { border-color: rgba(6,182,212,0.2); background: rgba(6,182,212,0.06); color: #67e8f9; }
-        .badge-neon-gold { border-color: rgba(251,191,36,0.25); background: rgba(251,191,36,0.08); color: #fbbf24; }
-        .badge-best-seller { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.15rem 0.75rem; border-radius: 9999px; font-size: 0.55rem; font-weight: 800; text-transform: uppercase; background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #000; box-shadow: 0 0 30px rgba(251,191,36,0.2); }
-        .badge-popular { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.15rem 0.75rem; border-radius: 9999px; font-size: 0.55rem; font-weight: 700; text-transform: uppercase; background: linear-gradient(135deg, #8B5CF6, #06B6D4); color: #fff; box-shadow: 0 0 30px rgba(139,92,246,0.2); }
+        /* ============================================================ */
+        /* BADGES                                                        */
+        /* ============================================================ */
+        .badge-neon {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.2rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: 1px solid rgba(139,92,246,0.2);
+            background: rgba(139,92,246,0.06);
+            color: #a78bfa;
+        }
+        .badge-neon-cyan {
+            border-color: rgba(6,182,212,0.2);
+            background: rgba(6,182,212,0.06);
+            color: #67e8f9;
+        }
+        .badge-neon-gold {
+            border-color: rgba(251,191,36,0.25);
+            background: rgba(251,191,36,0.08);
+            color: #fbbf24;
+        }
+        .badge-best-seller {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.15rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.55rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #000;
+            box-shadow: 0 0 30px rgba(251,191,36,0.2);
+        }
+        .badge-popular {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.15rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.55rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #8B5CF6, #06B6D4);
+            color: #fff;
+            box-shadow: 0 0 30px rgba(139,92,246,0.2);
+        }
 
-        /* --- Product Emblem --- */
-        .product-emblem { display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 1.25rem; background: rgba(139,92,246,0.06); border: 1px solid rgba(139,92,246,0.1); font-weight: 800; font-size: 1.6rem; color: #8B5CF6; transition: all 0.3s ease; flex-shrink: 0; }
-        .glass-card:hover .product-emblem { background: rgba(139,92,246,0.1); border-color: rgba(139,92,246,0.2); }
+        /* ============================================================ */
+        /* PRODUCT EMBLEM / LOGO                                        */
+        /* ============================================================ */
+        .product-emblem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            border-radius: 1.25rem;
+            background: rgba(139, 92, 246, 0.06);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+        .glass-card:hover .product-emblem {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: rgba(139, 92, 246, 0.2);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.1);
+        }
+        .product-emblem img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+        .product-emblem .emblem-text {
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: #8B5CF6;
+        }
 
-        /* --- Connection Selector --- */
-        .connection-selector { display: inline-flex; align-items: center; gap: 0; background: rgba(255,255,255,0.04); border-radius: 9999px; border: 1px solid rgba(255,255,255,0.06); overflow: hidden; }
-        .connection-selector button { background: transparent; border: none; color: #94a3b8; padding: 0.3rem 0.8rem; cursor: pointer; font-size: 0.85rem; font-weight: 700; transition: all 0.3s ease; min-width: 32px; display: flex; align-items: center; justify-content: center; }
-        .connection-selector button:hover:not(:disabled) { background: rgba(139,92,246,0.1); color: #a78bfa; }
-        .connection-selector button:disabled { opacity: 0.3; cursor: not-allowed; }
-        .connection-selector .count-display { padding: 0.3rem 0.8rem; color: #e2e8f0; font-weight: 700; font-size: 0.9rem; min-width: 40px; text-align: center; border-left: 1px solid rgba(255,255,255,0.05); border-right: 1px solid rgba(255,255,255,0.05); }
-        .connection-selector .conn-label { font-size: 0.6rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; padding: 0 0.6rem 0 0.2rem; }
-        .connection-selector.fixed { opacity: 0.6; cursor: not-allowed; }
-        .connection-selector.fixed button { cursor: not-allowed; opacity: 0.4; }
+        /* ============================================================ */
+        /* CONNECTION SELECTOR                                          */
+        /* ============================================================ */
+        .connection-selector {
+            display: inline-flex;
+            align-items: center;
+            gap: 0;
+            background: rgba(255,255,255,0.04);
+            border-radius: 9999px;
+            border: 1px solid rgba(255,255,255,0.06);
+            overflow: hidden;
+        }
+        .connection-selector button {
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            padding: 0.3rem 0.8rem;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            min-width: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .connection-selector button:hover:not(:disabled) {
+            background: rgba(139,92,246,0.1);
+            color: #a78bfa;
+        }
+        .connection-selector button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        .connection-selector .count-display {
+            padding: 0.3rem 0.8rem;
+            color: #e2e8f0;
+            font-weight: 700;
+            font-size: 0.9rem;
+            min-width: 40px;
+            text-align: center;
+            border-left: 1px solid rgba(255,255,255,0.05);
+            border-right: 1px solid rgba(255,255,255,0.05);
+        }
+        .connection-selector .conn-label {
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0 0.6rem 0 0.2rem;
+        }
+        .connection-selector.fixed {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .connection-selector.fixed button {
+            cursor: not-allowed;
+            opacity: 0.4;
+        }
 
-        /* --- Pricing Grid --- */
-        .price-grid-horizontal { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin: 0.75rem 0; }
-        .price-item-horizontal { display: flex; flex-direction: column; align-items: center; padding: 0.4rem 0.15rem; border-radius: 0.6rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.03); transition: all 0.3s ease; }
-        .price-item-horizontal:hover { background: rgba(139,92,246,0.05); border-color: rgba(139,92,246,0.1); }
-        .price-item-horizontal .duration { font-size: 0.55rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
-        .price-item-horizontal .amount { font-size: 1rem; font-weight: 800; color: #e2e8f0; margin-top: 0.05rem; }
-        .price-item-horizontal .amount .currency { font-size: 0.6rem; font-weight: 600; color: #64748b; }
-        .price-item-horizontal .savings-tag { font-size: 0.45rem; font-weight: 700; color: #34d399; background: rgba(52,211,153,0.1); padding: 0.05rem 0.4rem; border-radius: 9999px; margin-top: 0.05rem; }
+        /* ============================================================ */
+        /* PRICING GRID                                                  */
+        /* ============================================================ */
+        .price-grid-horizontal {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.4rem;
+            margin: 0.75rem 0;
+        }
+        .price-item-horizontal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.4rem 0.15rem;
+            border-radius: 0.6rem;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.03);
+            transition: all 0.3s ease;
+        }
+        .price-item-horizontal:hover {
+            background: rgba(139,92,246,0.05);
+            border-color: rgba(139,92,246,0.1);
+        }
+        .price-item-horizontal .duration {
+            font-size: 0.55rem;
+            font-weight: 600;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .price-item-horizontal .amount {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #e2e8f0;
+            margin-top: 0.05rem;
+        }
+        .price-item-horizontal .amount .currency {
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: #64748b;
+        }
+        .price-item-horizontal .savings-tag {
+            font-size: 0.45rem;
+            font-weight: 700;
+            color: #34d399;
+            background: rgba(52,211,153,0.1);
+            padding: 0.05rem 0.4rem;
+            border-radius: 9999px;
+            margin-top: 0.05rem;
+        }
 
-        /* --- CTA Buttons --- */
-        .cta-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.5rem 1rem; border-radius: 9999px; font-weight: 700; font-size: 0.7rem; transition: all 0.3s cubic-bezier(0.23,1,0.32,1); border: none; cursor: pointer; text-decoration: none; }
-        .cta-btn:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
-        .btn-primary { background: linear-gradient(135deg, #8B5CF6, #06B6D4); color: #fff; }
-        .btn-primary:hover { box-shadow: 0 10px 40px rgba(139,92,246,0.25); }
-        .btn-whatsapp { background: linear-gradient(135deg, #25D366, #1da851); color: #fff; }
-        .btn-whatsapp:hover { box-shadow: 0 10px 40px rgba(37,211,102,0.25); }
-        .btn-telegram { background: linear-gradient(135deg, #0088cc, #006699); color: #fff; }
-        .btn-telegram:hover { box-shadow: 0 10px 40px rgba(0,136,204,0.25); }
-        .btn-trial { background: rgba(255,255,255,0.04); color: #e2e8f0; border: 1px solid rgba(255,255,255,0.08); }
-        .btn-trial:hover { background: rgba(139,92,246,0.08); border-color: rgba(139,92,246,0.2); }
+        /* ============================================================ */
+        /* CTA BUTTONS                                                   */
+        /* ============================================================ */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.7rem;
+            transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #8B5CF6, #06B6D4);
+            color: #fff;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 10px 40px rgba(139,92,246,0.25);
+        }
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            color: #fff;
+        }
+        .btn-whatsapp:hover {
+            box-shadow: 0 10px 40px rgba(37,211,102,0.25);
+        }
+        .btn-telegram {
+            background: linear-gradient(135deg, #0088cc, #006699);
+            color: #fff;
+        }
+        .btn-telegram:hover {
+            box-shadow: 0 10px 40px rgba(0,136,204,0.25);
+        }
+        .btn-trial {
+            background: rgba(255,255,255,0.04);
+            color: #e2e8f0;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .btn-trial:hover {
+            background: rgba(139,92,246,0.08);
+            border-color: rgba(139,92,246,0.2);
+        }
 
-        /* --- Hero Section --- */
-        .hero-section { background: radial-gradient(ellipse at 30% 20%, rgba(139,92,246,0.04) 0%, rgba(6,182,212,0.02) 40%, #07070a 70%); border-bottom: 1px solid rgba(255,255,255,0.03); }
-        .hero-section .glow-orb { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(139,92,246,0.05) 0%, transparent 70%); top: -200px; right: -200px; pointer-events: none; }
-        .hero-section .glow-orb-2 { position: absolute; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(6,182,212,0.04) 0%, transparent 70%); bottom: -100px; left: -100px; pointer-events: none; }
+        /* ============================================================ */
+        /* HERO SECTION                                                  */
+        /* ============================================================ */
+        .hero-section {
+            background: radial-gradient(ellipse at 30% 20%, rgba(139,92,246,0.04) 0%, rgba(6,182,212,0.02) 40%, #07070a 70%);
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+        .hero-section .glow-orb {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(139,92,246,0.05) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            pointer-events: none;
+        }
+        .hero-section .glow-orb-2 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(6,182,212,0.04) 0%, transparent 70%);
+            bottom: -100px;
+            left: -100px;
+            pointer-events: none;
+        }
 
-        /* --- Footer Link --- */
-        .footer-link { color: #64748b; transition: all 0.3s ease; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; }
+        /* ============================================================ */
+        /* FOOTER LINK                                                   */
+        /* ============================================================ */
+        .footer-link {
+            color: #64748b;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
         .footer-link:hover { color: #a78bfa; }
 
-        /* --- Animations --- */
-        .price-updated { animation: priceFlash 0.3s ease; }
-        @keyframes priceFlash { 0% { color: #8B5CF6; transform: scale(1.1); } 100% { color: #e2e8f0; transform: scale(1); } }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        .fade-in-up { animation: fadeInUp 0.6s ease forwards; }
+        /* ============================================================ */
+        /* ANIMATIONS                                                    */
+        /* ============================================================ */
+        .price-updated {
+            animation: priceFlash 0.3s ease;
+        }
+        @keyframes priceFlash {
+            0% { color: #8B5CF6; transform: scale(1.1); }
+            100% { color: #e2e8f0; transform: scale(1); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease forwards;
+        }
 
-        /* --- Responsive --- */
-        @media (max-width: 1024px) { .price-grid-horizontal { grid-template-columns: repeat(2, 1fr); } }
+        /* ============================================================ */
+        /* 3D GLOBE WRAPPER                                             */
+        /* ============================================================ */
+        .globe-section {
+            background: radial-gradient(ellipse at 50% 50%, rgba(8,14,30,0.95) 0%, #07070a 100%);
+            padding: 2rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+        .globe-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 0.9;
+            min-height: 320px;
+            max-height: 580px;
+            border-radius: 2.5rem;
+            overflow: hidden;
+            background: radial-gradient(circle at 30% 40%, #0f1a2e, #03060e);
+            box-shadow: inset 0 0 60px rgba(0, 150, 255, 0.15), 0 0 40px rgba(139,92,246,0.05);
+        }
+        #three-canvas {
+            width: 100% !important;
+            height: 100% !important;
+            display: block;
+        }
+
+        /* Dashboard Grid for channel cards under globe */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        .panel {
+            background: rgba(8, 14, 30, 0.6);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 1.8rem;
+            padding: 1.2rem 1rem 1rem;
+            border: 1px solid rgba(0, 180, 255, 0.2);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+        }
+        .panel-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #7ac7ff;
+            text-shadow: 0 0 8px rgba(0, 160, 255, 0.4);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(64, 224, 255, 0.2);
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .panel-title i {
+            color: #00d4ff;
+            font-size: 0.9rem;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: 0.7rem;
+        }
+        .card-item {
+            background: rgba(18, 28, 50, 0.7);
+            backdrop-filter: blur(2px);
+            border-radius: 1.2rem;
+            padding: 0.6rem 0.3rem;
+            text-align: center;
+            border: 1px solid rgba(0, 180, 255, 0.15);
+            transition: all 0.2s;
+            color: #e0f0ff;
+            font-size: 0.7rem;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        .card-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 180, 255, 0.4);
+            box-shadow: 0 8px 24px rgba(0, 180, 255, 0.1);
+        }
+        .card-item i {
+            font-size: 1.6rem;
+            color: #6bc8ff;
+            filter: drop-shadow(0 0 6px rgba(0, 180, 255, 0.5));
+            margin-bottom: 0.1rem;
+        }
+        .card-item img {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 6px rgba(0, 180, 255, 0.4));
+            margin-bottom: 0.1rem;
+            border-radius: 6px;
+        }
+        .card-item span {
+            line-height: 1.2;
+            color: #c8e6ff;
+        }
+        .card-item .sub {
+            font-size: 0.55rem;
+            opacity: 0.7;
+            letter-spacing: 0.02em;
+        }
+
+        /* ============================================================ */
+        /* RESPONSIVE                                                    */
+        /* ============================================================ */
+        @media (max-width: 1024px) {
+            .price-grid-horizontal { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .dashboard-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .card-grid { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
+            .globe-wrapper { aspect-ratio: 1 / 1; max-height: 400px; }
+        }
         @media (max-width: 640px) {
             .price-grid-horizontal { grid-template-columns: repeat(2, 1fr); gap: 0.3rem; }
             .price-item-horizontal .amount { font-size: 0.85rem; }
             .cta-btn { padding: 0.4rem 0.8rem; font-size: 0.65rem; width: 100%; }
             .glass-card { padding: 1.25rem; }
-            .product-emblem { width: 56px; height: 56px; font-size: 1.2rem; }
+            .product-emblem { width: 56px; height: 56px; }
+            .product-emblem img { width: 36px; height: 36px; }
+            .product-emblem .emblem-text { font-size: 1.2rem; }
+        }
+        @media (max-width: 420px) {
+            .card-grid { grid-template-columns: repeat(3, 1fr); }
         }
     </style>
 </head>
@@ -167,8 +542,13 @@
     <!-- ============================================================ -->
     <header class="sticky top-0 z-50 bg-[#07070a]/90 backdrop-blur-xl border-b border-white/5">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-            <a href="/" class="flex items-center space-x-2" aria-label="Stream8K Home">
-                <span class="text-2xl md:text-3xl font-extrabold tracking-tight">
+            <a href="/" class="flex items-center space-x-3 group">
+                <!-- Replace with your main logo -->
+                <img src="https://stream8k.tv/assets/logo.png" 
+                     alt="Stream8K IPTV - Premium IPTV Service" 
+                     class="h-10 md:h-12 w-auto transition-transform group-hover:scale-105"
+                     width="48" height="48">
+                <span class="hidden sm:inline-block text-xl md:text-2xl font-extrabold tracking-tight">
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4]">Stream</span>
                     <span class="text-white">8K</span>
                 </span>
@@ -176,7 +556,7 @@
             </a>
             <ul class="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-400">
                 <li><a href="/" class="text-[#8B5CF6] border-b-2 border-[#8B5CF6] pb-1 hover:text-white transition">Home</a></li>
-                <li><a href="/products.html" class="hover:text-white transition">Products</a></li>
+                <li><a href="#products" class="hover:text-white transition">Products</a></li>
                 <li><a href="/reseller.html" class="hover:text-white transition">Reseller</a></li>
                 <li><a href="/setup-guide.html" class="hover:text-white transition">Setup Guides</a></li>
                 <li><a href="/contact.html" class="hover:text-white transition">Contact</a></li>
@@ -185,7 +565,7 @@
                 <a href="#products" class="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] hover:from-[#7C3AED] hover:to-[#0891B2] text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-all shadow-lg shadow-[#8B5CF6]/20">
                     <i class="fas fa-box"></i>Browse Products
                 </a>
-                <button id="mobile-menu-toggle" class="lg:hidden text-gray-400 hover:text-white text-2xl focus:outline-none transition" aria-label="Toggle navigation">
+                <button id="mobile-menu-toggle" class="lg:hidden text-gray-400 hover:text-white text-2xl focus:outline-none transition">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -193,7 +573,7 @@
         <div id="mobile-menu" class="lg:hidden hidden bg-[#07070a]/95 border-t border-white/5 px-4 py-6 backdrop-blur-xl">
             <ul class="flex flex-col space-y-4 text-center text-sm font-medium text-gray-400">
                 <li><a href="/" class="text-[#8B5CF6] block">Home</a></li>
-                <li><a href="/products.html" class="hover:text-white block">Products</a></li>
+                <li><a href="#products" class="hover:text-white block">Products</a></li>
                 <li><a href="/reseller.html" class="hover:text-white block">Reseller</a></li>
                 <li><a href="/setup-guide.html" class="hover:text-white block">Setup Guides</a></li>
                 <li><a href="/contact.html" class="hover:text-white block">Contact</a></li>
@@ -210,7 +590,7 @@
         <!-- ============================================================ -->
         <!-- HERO SECTION                                                 -->
         <!-- ============================================================ -->
-        <section class="hero-section text-white py-20 md:py-32 relative overflow-hidden">
+        <section class="hero-section text-white py-16 md:py-20 relative overflow-hidden">
             <div class="glow-orb"></div>
             <div class="glow-orb-2"></div>
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-5xl">
@@ -241,7 +621,44 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- PRODUCT CARDS (14 Products)                                  -->
+        <!-- 3D GLOBE SECTION                                             -->
+        <!-- ============================================================ -->
+        <section class="globe-section">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-6">
+                    <span class="text-[#06B6D4] text-xs font-semibold tracking-widest uppercase">Global Coverage</span>
+                    <h2 class="text-2xl md:text-4xl font-bold text-white mt-2">
+                        Worldwide <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4]">Content Network</span>
+                    </h2>
+                </div>
+
+                <!-- 3D Globe Container -->
+                <div class="globe-wrapper" id="globe-container">
+                    <canvas id="three-canvas"></canvas>
+                </div>
+
+                <!-- Bottom Dashboard with Channel Cards -->
+                <div class="dashboard-grid">
+                    <!-- Left: Global Sports & Live TV -->
+                    <div class="panel">
+                        <div class="panel-title"><i class="fas fa-trophy"></i> Global Sports & Live TV</div>
+                        <div class="card-grid" id="sports-grid">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                    <!-- Right: Global Streaming Platforms -->
+                    <div class="panel">
+                        <div class="panel-title"><i class="fas fa-film"></i> Global Streaming Platforms</div>
+                        <div class="card-grid" id="streaming-grid">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- PRODUCTS SECTION                                             -->
         <!-- ============================================================ -->
         <section id="products" class="py-16 md:py-20 bg-[#07070a]">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -296,7 +713,7 @@
         </section>
 
         <!-- ============================================================ -->
-        <!-- STATS SECTION                                                 -->
+        <!-- STATS                                                         -->
         <!-- ============================================================ -->
         <section class="py-16 bg-[#07070a]">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -330,9 +747,12 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div class="col-span-2 md:col-span-1">
-                    <a href="/" class="text-2xl font-extrabold">
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4]">Stream</span>
-                        <span class="text-white">8K</span>
+                    <a href="/" class="flex items-center space-x-3">
+                        <img src="https://stream8k.tv/assets/logo.png" alt="Stream8K" class="h-8 w-auto">
+                        <span class="text-2xl font-extrabold">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4]">Stream</span>
+                            <span class="text-white">8K</span>
+                        </span>
                     </a>
                     <p class="text-gray-600 text-sm mt-3 leading-relaxed">Premium IPTV subscription service with 15+ servers and 500,000+ channels & VOD.</p>
                     <div class="flex space-x-4 mt-4">
@@ -346,7 +766,7 @@
                     <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Quick Links</h4>
                     <ul class="mt-4 space-y-2 text-sm">
                         <li><a href="/" class="text-gray-500 hover:text-[#8B5CF6] transition">Home</a></li>
-                        <li><a href="/products.html" class="text-gray-500 hover:text-[#8B5CF6] transition">Products</a></li>
+                        <li><a href="#products" class="text-gray-500 hover:text-[#8B5CF6] transition">Products</a></li>
                         <li><a href="/reseller.html" class="text-gray-500 hover:text-[#8B5CF6] transition">Reseller</a></li>
                         <li><a href="/setup-guide.html" class="text-gray-500 hover:text-[#8B5CF6] transition">Setup Guides</a></li>
                     </ul>
@@ -379,42 +799,500 @@
     </footer>
 
     <!-- ============================================================ -->
-    <!-- JAVASCRIPT - PRODUCT RENDER ENGINE                            -->
+    <!-- JAVASCRIPT - 3D GLOBE + PRODUCTS                              -->
     <!-- ============================================================ -->
-    <script>
+    <script type="module">
         // =============================================================
-        // PRODUCT DATA
+        // 1. CHANNEL LOGO CONFIGURATION
+        //    Add your custom logos here: domain/worldimages/logo.png
+        // =============================================================
+        const channelImages = {
+            // Sports & Competitions
+            'ESPN+': { image: 'https://stream8k.tv/worldimages/espn.png' },
+            'Sky Sports': { image: 'https://stream8k.tv/worldimages/skysports.png' },
+            'beIN Sports': { image: 'https://stream8k.tv/worldimages/bein.png' },
+            'OSN': { image: 'https://stream8k.tv/worldimages/osn.png' },
+            'NFL Network': { image: 'https://stream8k.tv/worldimages/nfl.png' },
+            'NHL Network': { image: 'https://stream8k.tv/worldimages/nhl.png' },
+            'Olympics': { image: 'https://stream8k.tv/worldimages/olympics.png' },
+            'MotoGP': { image: 'https://stream8k.tv/worldimages/motogp.png' },
+            'Tour de France': { image: 'https://stream8k.tv/worldimages/tdf.png' },
+            'The Masters': { image: 'https://stream8k.tv/worldimages/masters.png' },
+            
+            // Streaming Platforms
+            'Netflix': { image: 'https://stream8k.tv/worldimages/netflix.png' },
+            'Hulu': { image: 'https://stream8k.tv/worldimages/hulu.png' },
+            'Apple TV+': { image: 'https://stream8k.tv/worldimages/appletv.png' },
+            'Disney+': { image: 'https://stream8k.tv/worldimages/disney.png' },
+            'Max': { image: 'https://stream8k.tv/worldimages/max.png' },
+            'Prime Video': { image: 'https://stream8k.tv/worldimages/prime.png' },
+            'Paramount+': { image: 'https://stream8k.tv/worldimages/paramount.png' },
+            'Peacock': { image: 'https://stream8k.tv/worldimages/peacock.png' },
+            'DAZN': { image: 'https://stream8k.tv/worldimages/dazn.png' },
+            'Crunchyroll': { image: 'https://stream8k.tv/worldimages/crunchyroll.png' },
+            
+            // TV Channels
+            'BBC World': { image: 'https://stream8k.tv/worldimages/bbc.png' },
+            'CNN': { image: 'https://stream8k.tv/worldimages/cnn.png' },
+            'Al Jazeera': { image: 'https://stream8k.tv/worldimages/aljazeera.png' },
+            'Sky News': { image: 'https://stream8k.tv/worldimages/skynews.png' },
+            'Fox News': { image: 'https://stream8k.tv/worldimages/foxnews.png' },
+            'MSNBC': { image: 'https://stream8k.tv/worldimages/msnbc.png' },
+            'CCTV': { image: 'https://stream8k.tv/worldimages/cctv.png' },
+            'Euronews': { image: 'https://stream8k.tv/worldimages/euronews.png' },
+            'France 24': { image: 'https://stream8k.tv/worldimages/france24.png' },
+            'Deutsche Welle': { image: 'https://stream8k.tv/worldimages/dw.png' },
+            'RT': { image: 'https://stream8k.tv/worldimages/rt.png' },
+            'NHK World': { image: 'https://stream8k.tv/worldimages/nhk.png' },
+            'KBS World': { image: 'https://stream8k.tv/worldimages/kbs.png' },
+            'CNA': { image: 'https://stream8k.tv/worldimages/cna.png' }
+        };
+
+        // =============================================================
+        // 2. PRODUCT DATA
         // =============================================================
         const productsData = [
-            { id: 'crystal', name: 'Crystal IPTV', logo: 'CR', rating: 4.7, description: 'Clear stream, anti-freeze technology, and quick support. Perfect for reliability.', channels: '33,500+', vod: '90,000+', series: '13,000+', creditSystem: '1 credit = 1 year', maxConnections: 1, isFixedConnection: true, features: ['Clear Stream', 'Anti-freeze'], basePrices: { m1: 9.99, m3: 24.99, m6: 42.99, m12: 69.99 }, isBestSeller: false, isPopular: false },
-            { id: 'dino', name: 'Dino IPTV', logo: '🦕', rating: 4.5, description: 'Affordable panel with a massive channel list. Great for budget-conscious users.', channels: '29,800+', vod: '75,000+', series: '10,000+', creditSystem: '12 credits = 1 year', maxConnections: 1, isFixedConnection: true, features: ['Affordable', 'Free Trial'], basePrices: { m1: 5.99, m3: 14.99, m6: 24.99, m12: 44.99 }, isBestSeller: false, isPopular: false },
-            { id: 'dream4k', name: 'Dream 4K', logo: '4K', rating: 4.9, description: 'Ultra HD 4K/8K streaming with Dolby Audio. No buffering, pure cinematic quality.', channels: '39,800+', vod: '102,000+', series: '18,000+', creditSystem: '12 credits = 1 year', maxConnections: 3, isFixedConnection: false, features: ['Ultra HD 4K/8K', 'Dolby Audio'], basePrices: { m1: 14.99, m3: 36.99, m6: 59.99, m12: 99.99 }, isBestSeller: true, isPopular: false },
-            { id: 'eagle', name: 'Eagle IPTV', logo: '🦅', rating: 4.7, description: 'Stable streaming with fast activation. Catch-up TV and reliable performance.', channels: '12,620+', vod: '42,005+', series: '9,419+', creditSystem: '12 credits = 1 year', maxConnections: 1, isFixedConnection: true, features: ['Stable Streaming', 'Fast Activation'], basePrices: { m1: 7.99, m3: 19.99, m6: 34.99, m12: 59.99 }, isBestSeller: false, isPopular: false },
-            { id: 'infinity', name: 'Infinity IPTV', logo: '♾️', rating: 4.8, description: 'Endless content with the latest movies and live sports. Ultimate entertainment hub.', channels: '37,800+', vod: '110,000+', series: '20,000+', creditSystem: '1 credit = 1 year', maxConnections: 2, isFixedConnection: false, features: ['Latest Movies', 'Live Sports'], basePrices: { m1: 13.99, m3: 34.99, m6: 55.99, m12: 94.99 }, isBestSeller: false, isPopular: true },
-            { id: 'lion', name: 'Lion OTT', logo: '🦁', rating: 4.7, description: 'Stable streaming with multi-device support. Large library for the whole family.', channels: '18,484+', vod: '86,126+', series: '22,555+', creditSystem: '1 credit = 1 year', maxConnections: 2, isFixedConnection: false, features: ['Multi-Device', 'Large Library'], basePrices: { m1: 10.99, m3: 26.99, m6: 45.99, m12: 79.99 }, isBestSeller: false, isPopular: false },
-            { id: 'magnum', name: 'Magnum OTT', logo: 'MG', rating: 4.8, description: 'Very stable for USA users. Free apps included. Premium quality for the discerning viewer.', channels: '21,141+', vod: '106,175+', series: '—', creditSystem: '1 credit = 1 year', maxConnections: 1, isFixedConnection: true, features: ['USA Stable', 'Free Apps'], basePrices: { m1: 11.99, m3: 29.99, m6: 49.99, m12: 84.99 }, isBestSeller: false, isPopular: false },
-            { id: 'maxott', name: 'Max OTT', logo: 'MX', rating: 4.6, description: 'Maximum channels with best quality. API access for advanced users and developers.', channels: '31,200+', vod: '82,000+', series: '11,000+', creditSystem: '12 credits = 1 year', maxConnections: 3, isFixedConnection: false, features: ['Maximum Channels', 'Best Quality'], basePrices: { m1: 12.99, m3: 31.99, m6: 52.99, m12: 89.99 }, isBestSeller: false, isPopular: false },
-            { id: 'megaott', name: 'Mega OTT', logo: 'M', rating: 4.8, description: 'Vast content library with excellent stability. Variety and reliability combined.', channels: '28,500+', vod: '95,000+', series: '12,000+', creditSystem: '1 credit = 1 year', maxConnections: 1, isFixedConnection: true, features: ['Stable Streaming', 'Large VOD Library'], basePrices: { m1: 8.99, m3: 21.99, m6: 37.99, m12: 64.99 }, isBestSeller: false, isPopular: false },
-            { id: 'nexon', name: 'Nexon IPTV', logo: 'NX', rating: 4.7, description: 'Best-selling in Spain. Fast activation and easy management for resellers and users.', channels: '17,200+', vod: '120,000+', series: '—', creditSystem: '12 credits = 1 year', maxConnections: 1, isFixedConnection: true, features: ['Fast Activation', 'Easy Management'], basePrices: { m1: 9.49, m3: 23.99, m6: 39.99, m12: 69.99 }, isBestSeller: false, isPopular: false },
-            { id: 'promax', name: 'ProMax IPTV', logo: 'PM', rating: 4.8, description: 'Max speed CDN with auto setup. Includes PPV events and premium sports coverage.', channels: '36,200+', vod: '95,000+', series: '14,000+', creditSystem: '12 credits = 1 year', maxConnections: 2, isFixedConnection: false, features: ['Max Speed CDN', 'Auto Setup'], basePrices: { m1: 15.99, m3: 39.99, m6: 64.99, m12: 109.99 }, isBestSeller: false, isPopular: false },
-            { id: 'strong8k', name: 'Strong 8K', logo: '8K', rating: 4.9, description: 'Premium 8K streaming with instant activation. The pinnacle of IPTV quality.', channels: '34,261+', vod: '123,499+', series: '—', creditSystem: '12 credits = 1 year', maxConnections: 1, isFixedConnection: true, features: ['8K Streaming', 'Instant Activation'], basePrices: { m1: 18.99, m3: 47.99, m6: 77.99, m12: 129.99 }, isBestSeller: false, isPopular: false },
-            { id: 'tivione', name: 'TiviOne', logo: 'T1', rating: 4.5, description: 'Tivimate compatible with easy installation. Family friendly content for all ages.', channels: '28,700+', vod: '68,000+', series: '8,000+', creditSystem: '1 credit = 1 year', maxConnections: 1, isFixedConnection: true, features: ['Tivimate Compatible', 'Easy Install'], basePrices: { m1: 7.49, m3: 18.99, m6: 31.99, m12: 54.99 }, isBestSeller: false, isPopular: false },
-            { id: 'trex', name: 'Trex IPTV', logo: '🦖', rating: 4.9, description: 'Most popular panel with the largest library. 4K/8K quality with full M3U/MAG support.', channels: '42,500+', vod: '110,000+', series: '18,500+', creditSystem: '12 credits = 1 year', maxConnections: 4, isFixedConnection: false, features: ['4K/8K Quality', 'M3U/MAG Support'], basePrices: { m1: 16.99, m3: 41.99, m6: 69.99, m12: 119.99 }, isBestSeller: true, isPopular: false }
+            { id: 'crystal', name: 'Crystal IPTV', rating: 4.7, description: 'Clear stream, anti-freeze technology, and quick support. Perfect for reliability.', channels: '33,500+', vod: '90,000+', series: '13,000+', creditSystem: '1 credit = 1 year', maxConnections: 1, isFixedConnection: true, features: ['Clear Stream', 'Anti-freeze'], basePrices: { m1: 9.99, m3: 24.99, m6: 42.99, m12: 69.99 }, isBestSeller: false, isPopular: false, logo: 'CR' },
+            { id: 'dino', name: 'Dino IPTV', rating: 4.5, description: 'Affordable panel with a massive channel list. Great for budget-conscious users.', channels: '29,800+', vod: '75,000+', series: '10,000+', creditSystem: '12 credits = 1 year', maxConnections: 1, isFixedConnection: true, features: ['Affordable', 'Free Trial'], basePrices: { m1: 5.99, m3: 14.99, m6: 24.99, m12: 44.99 }, isBestSeller: false, isPopular: false, logo: '🦕' },
+            { id: 'dream4k', name: 'Dream 4K', rating: 4.9, description: 'Ultra HD 4K/8K streaming with Dolby Audio. No buffering, pure cinematic quality.', channels: '39,800+', vod: '102,000+', series: '18,000+', creditSystem: '12 credits = 1 year', maxConnections: 3, isFixedConnection: false, features: ['Ultra HD 4K/8K', 'Dolby Audio'], basePrices: { m1: 14.99, m3: 36.99, m6: 59.99, m12: 99.99 }, isBestSeller: true, isPopular: false, logo: '4K' },
+            { id: 'eagle', name: 'Eagle IPTV', rating: 4.7, description: 'Stable streaming with fast activation. Catch-up TV and reliable performance.', channels: '12,620+', vod: '42,005+', series: '9,419+', creditSystem: '12 credits = 1 year', maxConnections: 1, isFixedConnection: true, features: ['Stable Streaming', 'Fast Activation'], basePrices: { m1: 7.99, m3: 19.99, m6: 34.99, m12: 59.99 }, isBestSeller: false, isPopular: false, logo: '🦅' },
+            { id: 'infinity', name: 'Infinity IPTV', rating: 4.8, description: 'Endless content with the latest movies and live sports. Ultimate entertainment hub.', channels: '37,800+', vod: '110,000+', series: '20,000+', creditSystem: '1 credit = 1 year', maxConnections: 2, isFixedConnection: false, features: ['Latest Movies', 'Live Sports'], basePrices: { m1: 13.99, m3: 34.99, m6: 55.99, m12: 94.99 }, isBestSeller: false, isPopular: true, logo: '♾️' },
+            { id: 'lion', name: 'Lion OTT', rating: 4.7, description: 'Stable streaming with multi-device support. Large library for the whole family.', channels: '18,484+', vod: '86,126+', series: '22,555+', creditSystem: '1 credit = 1 year', maxConnections: 2, isFixedConnection: false, features: ['Multi-Device', 'Large Library'], basePrices: { m1: 10.99, m3: 26.99, m6: 45.99, m12: 79.99 }, isBestSeller: false, isPopular: false, logo: '🦁' },
+            { id: 'magnum', name: 'Magnum OTT', rating: 4.8, description: 'Very stable for USA users. Free apps included. Premium quality for the discerning viewer.', channels: '21,141+', vod: '106,175+', series: '—', creditSystem: '1 credit = 1 year', maxConnections: 1, isFixedConnection: true, features: ['USA Stable', 'Free Apps'], basePrices: { m1: 11.99, m3: 29.99, m6: 49.99, m12: 84.99 }, isBestSeller: false, isPopular: false, logo: 'MG' },
+            { id: 'maxott', name: 'Max OTT', rating: 4.6, description: 'Maximum channels with best quality. API access for advanced users and developers.', channels: '31,200+', vod: '82,000+', series: '11,000+', creditSystem: '12 credits = 1 year', maxConnections: 3, isFixedConnection: false, features: ['Maximum Channels', 'Best Quality'], basePrices: { m1: 12.99, m3: 31.99, m6: 52.99, m12: 89.99 }, isBestSeller: false, isPopular: false, logo: 'MX' },
+            { id: 'megaott', name: 'Mega OTT', rating: 4.8, description: 'Vast content library with excellent stability. Variety and reliability combined.', channels: '28,500+', vod: '95,000+', series: '12,000+', creditSystem: '1 credit = 1 year', maxConnections: 1, isFixedConnection: true, features: ['Stable Streaming', 'Large VOD Library'], basePrices: { m1: 8.99, m3: 21.99, m6: 37.99, m12: 64.99 }, isBestSeller: false, isPopular: false, logo: 'M' },
+            { id: 'nexon', name: 'Nexon IPTV', rating: 4.7, description: 'Best-selling in Spain. Fast activation and easy management for resellers and users.', channels: '17,200+', vod: '120,000+', series: '—', creditSystem: '12 credits = 1 year', maxConnections: 1, isFixedConnection: true, features: ['Fast Activation', 'Easy Management'], basePrices: { m1: 9.49, m3: 23.99, m6: 39.99, m12: 69.99 }, isBestSeller: false, isPopular: false, logo: 'NX' },
+            { id: 'promax', name: 'ProMax IPTV', rating: 4.8, description: 'Max speed CDN with auto setup. Includes PPV events and premium sports coverage.', channels: '36,200+', vod: '95,000+', series: '14,000+', creditSystem: '12 credits = 1 year', maxConnections: 2, isFixedConnection: false, features: ['Max Speed CDN', 'Auto Setup'], basePrices: { m1: 15.99, m3: 39.99, m6: 64.99, m12: 109.99 }, isBestSeller: false, isPopular: false, logo: 'PM' },
+            { id: 'strong8k', name: 'Strong 8K', rating: 4.9, description: 'Premium 8K streaming with instant activation. The pinnacle of IPTV quality.', channels: '34,261+', vod: '123,499+', series: '—', creditSystem: '12 credits = 1 year', maxConnections: 1, isFixedConnection: true, features: ['8K Streaming', 'Instant Activation'], basePrices: { m1: 18.99, m3: 47.99, m6: 77.99, m12: 129.99 }, isBestSeller: false, isPopular: false, logo: '8K' },
+            { id: 'tivione', name: 'TiviOne', rating: 4.5, description: 'Tivimate compatible with easy installation. Family friendly content for all ages.', channels: '28,700+', vod: '68,000+', series: '8,000+', creditSystem: '1 credit = 1 year', maxConnections: 1, isFixedConnection: true, features: ['Tivimate Compatible', 'Easy Install'], basePrices: { m1: 7.49, m3: 18.99, m6: 31.99, m12: 54.99 }, isBestSeller: false, isPopular: false, logo: 'T1' },
+            { id: 'trex', name: 'Trex IPTV', rating: 4.9, description: 'Most popular panel with the largest library. 4K/8K quality with full M3U/MAG support.', channels: '42,500+', vod: '110,000+', series: '18,500+', creditSystem: '12 credits = 1 year', maxConnections: 4, isFixedConnection: false, features: ['4K/8K Quality', 'M3U/MAG Support'], basePrices: { m1: 16.99, m3: 41.99, m6: 69.99, m12: 119.99 }, isBestSeller: true, isPopular: false, logo: '🦖' }
         ];
 
-        const EXTRA_CONNECTION_COST = 2.00;
+        // =============================================================
+        // 3. RENDER CHANNEL CARDS
+        // =============================================================
+        function createCardItem(name, iconClass = null) {
+            const div = document.createElement('div');
+            div.className = 'card-item';
+            
+            const imgConfig = channelImages[name];
+            if (imgConfig && imgConfig.image) {
+                const img = document.createElement('img');
+                img.src = imgConfig.image;
+                img.alt = name;
+                img.loading = 'lazy';
+                img.onerror = () => {
+                    img.style.display = 'none';
+                    const fallbackIcon = document.createElement('i');
+                    fallbackIcon.className = iconClass || 'fas fa-tv';
+                    div.insertBefore(fallbackIcon, div.firstChild);
+                };
+                div.appendChild(img);
+            } else {
+                const icon = document.createElement('i');
+                icon.className = iconClass || 'fas fa-tv';
+                div.appendChild(icon);
+            }
+            
+            const span = document.createElement('span');
+            span.textContent = name;
+            div.appendChild(span);
+            
+            return div;
+        }
+
+        // Sports & Live TV cards
+        const sportsGrid = document.getElementById('sports-grid');
+        const sportsList = [
+            { name: 'ESPN+', icon: 'fas fa-football-ball' },
+            { name: 'Sky Sports', icon: 'fas fa-futbol' },
+            { name: 'beIN Sports', icon: 'fas fa-basketball-ball' },
+            { name: 'OSN', icon: 'fas fa-tv' },
+            { name: 'NFL Network', icon: 'fas fa-baseball-ball' },
+            { name: 'NHL Network', icon: 'fas fa-hockey-puck' },
+            { name: 'Olympics', icon: 'fas fa-medal' },
+            { name: 'MotoGP', icon: 'fas fa-flag-checkered' },
+            { name: 'Tour de France', icon: 'fas fa-biking' },
+            { name: 'The Masters', icon: 'fas fa-golf-ball' }
+        ];
+        sportsList.forEach(item => {
+            sportsGrid.appendChild(createCardItem(item.name, item.icon));
+        });
+
+        // Streaming Platforms cards
+        const streamingGrid = document.getElementById('streaming-grid');
+        const streamingList = [
+            { name: 'Netflix', icon: 'fab fa-netflix' },
+            { name: 'Hulu', icon: 'fab fa-hulu' },
+            { name: 'Apple TV+', icon: 'fab fa-apple' },
+            { name: 'Disney+', icon: 'fab fa-disney' },
+            { name: 'Max', icon: 'fas fa-plus-circle' },
+            { name: 'Prime Video', icon: 'fab fa-amazon' },
+            { name: 'Paramount+', icon: 'fas fa-play-circle' },
+            { name: 'Peacock', icon: 'fas fa-star' },
+            { name: 'DAZN', icon: 'fas fa-bolt' },
+            { name: 'Crunchyroll', icon: 'fas fa-globe' }
+        ];
+        streamingList.forEach(item => {
+            streamingGrid.appendChild(createCardItem(item.name, item.icon));
+        });
 
         // =============================================================
-        // PRICING ENGINE
+        // 4. THREE.JS 3D GLOBE WITH ORBITING LOGOS
         // =============================================================
+        import * as THREE from 'three';
+        import { OrbitControls } from 'https://unpkg.com/three@0.128.0/examples/jsm/controls/OrbitControls.js';
+
+        const container = document.getElementById('globe-container');
+        const canvas = document.getElementById('three-canvas');
+
+        const scene = new THREE.Scene();
+        scene.background = null;
+        
+        const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+        camera.position.set(0, 1.2, 5.5);
+        camera.lookAt(0, 0, 0);
+
+        const renderer = new THREE.WebGLRenderer({ 
+            canvas: canvas,
+            antialias: true,
+            alpha: true
+        });
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        // Lights
+        const ambientLight = new THREE.AmbientLight(0x404060);
+        scene.add(ambientLight);
+
+        const dirLight = new THREE.DirectionalLight(0xbfe4ff, 1.2);
+        dirLight.position.set(2, 3, 4);
+        scene.add(dirLight);
+
+        const backLight = new THREE.DirectionalLight(0x4a7aff, 0.9);
+        backLight.position.set(-3, -1, -3);
+        scene.add(backLight);
+
+        const pointLight = new THREE.PointLight(0x0088ff, 0.5, 10);
+        pointLight.position.set(1, 1, 3);
+        scene.add(pointLight);
+
+        // Earth Globe
+        const globeGroup = new THREE.Group();
+        scene.add(globeGroup);
+
+        const geometry = new THREE.SphereGeometry(1.3, 64, 64);
+        const textureLoader = new THREE.TextureLoader();
+        const earthMap = textureLoader.load('https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg');
+        const material = new THREE.MeshPhongMaterial({
+            map: earthMap,
+            shininess: 8,
+            specular: new THREE.Color(0x333355),
+        });
+        const earth = new THREE.Mesh(geometry, material);
+        earth.rotation.x = 0.2;
+        earth.rotation.y = -0.5;
+        globeGroup.add(earth);
+
+        // Glow aura
+        const glowGeo = new THREE.SphereGeometry(1.38, 48, 48);
+        const glowMat = new THREE.MeshBasicMaterial({
+            color: 0x88ccff,
+            transparent: true,
+            opacity: 0.1,
+            side: THREE.BackSide
+        });
+        const glow = new THREE.Mesh(glowGeo, glowMat);
+        globeGroup.add(glow);
+
+        // Helper: Create orbiting logo/text sprites with image support
+        function createOrbitRing(radius, yOffset, items, color, size = 0.55) {
+            const group = new THREE.Group();
+            group.position.y = yOffset;
+            
+            const count = items.length;
+            items.forEach((item, idx) => {
+                const angle = (idx / count) * Math.PI * 2;
+                const x = radius * Math.cos(angle);
+                const z = radius * Math.sin(angle);
+
+                const canvasEl = document.createElement('canvas');
+                const ctx = canvasEl.getContext('2d');
+                canvasEl.width = 256;
+                canvasEl.height = 128;
+                
+                // Background with glow
+                ctx.shadowColor = '#00aaff';
+                ctx.shadowBlur = 20;
+                ctx.shadowBlur = 0;
+                ctx.beginPath();
+                ctx.roundRect(20, 10, 216, 90, 30);
+                ctx.fillStyle = 'rgba(10, 20, 40, 0.75)';
+                ctx.fill();
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 2;
+                ctx.shadowBlur = 16;
+                ctx.shadowColor = '#00aaff';
+                ctx.beginPath();
+                ctx.roundRect(20, 10, 216, 90, 30);
+                ctx.stroke();
+
+                // Check if we have a custom image for this item
+                const imgConfig = channelImages[item];
+                const hasCustomImage = imgConfig && imgConfig.image;
+
+                if (hasCustomImage) {
+                    const img = new Image();
+                    img.crossOrigin = 'anonymous';
+                    img.src = imgConfig.image;
+                    img.onload = () => {
+                        ctx.clearRect(0, 0, 256, 128);
+                        ctx.beginPath();
+                        ctx.roundRect(20, 10, 216, 90, 30);
+                        ctx.fillStyle = 'rgba(10, 20, 40, 0.75)';
+                        ctx.fill();
+                        ctx.strokeStyle = color;
+                        ctx.lineWidth = 2;
+                        ctx.shadowBlur = 16;
+                        ctx.shadowColor = '#00aaff';
+                        ctx.beginPath();
+                        ctx.roundRect(20, 10, 216, 90, 30);
+                        ctx.stroke();
+                        
+                        const imgSize = 54;
+                        const imgX = 30;
+                        const imgY = 20;
+                        ctx.shadowBlur = 20;
+                        ctx.shadowColor = '#00aaff';
+                        ctx.drawImage(img, imgX, imgY, imgSize, imgSize);
+                        
+                        ctx.shadowBlur = 24;
+                        ctx.shadowColor = '#00ccff';
+                        ctx.fillStyle = '#f0fcff';
+                        ctx.font = 'bold 22px "Inter", "Segoe UI", system-ui';
+                        ctx.textAlign = 'left';
+                        ctx.textBaseline = 'middle';
+                        const textX = imgX + imgSize + 10;
+                        const textY = 64;
+                        let displayText = item;
+                        if (displayText.length > 12) {
+                            displayText = displayText.substring(0, 10) + '…';
+                        }
+                        ctx.fillText(displayText, textX, textY);
+                        
+                        texture.needsUpdate = true;
+                    };
+                    img.onerror = () => {
+                        drawEmojiFallback(ctx, item, color);
+                        texture.needsUpdate = true;
+                    };
+                }
+
+                const displayMap = {
+                    'UEFA CL': '⚽ UEFA CL',
+                    'NBA': '🏀 NBA',
+                    'FIFA WC': '🌍 FIFA WC',
+                    'NFL': '🏈 NFL',
+                    'Formula 1': '🏎️ F1',
+                    'Netflix': '📺 Netflix',
+                    'Hulu': '📺 Hulu',
+                    'Apple TV+': '🍎 Apple TV+',
+                    'Disney+': '✨ Disney+',
+                    'HBO Max': '🎬 HBO Max',
+                    'Amazon Prime': '📦 Prime',
+                    'BBC World': '📰 BBC',
+                    'CNN': '📰 CNN',
+                    'Al Jazeera': '📺 Al Jazeera',
+                    'beIN Sports': '📡 beIN',
+                    'Sky News': '📡 Sky News',
+                    'ESPN': '🏆 ESPN',
+                    'DAZN': '🥊 DAZN',
+                    'Premier League': '🏴󠁧󠁢󠁥󠁮󠁧󠁿 EPL',
+                    'La Liga': '🇪🇸 La Liga',
+                    'Bundesliga': '🇩🇪 Bundesliga',
+                    'Serie A': '🇮🇹 Serie A',
+                    'Ligue 1': '🇫🇷 Ligue 1',
+                    'Champions League': '🌟 UCL',
+                    'Europa League': '🌙 UEL',
+                    'Conference League': '🌐 UECL',
+                    'MLS': '🇺🇸 MLS',
+                    'World Cup': '🌍 WC',
+                    'Olympics': '🏅 Olympics',
+                    'Tour de France': '🚴 TdF',
+                    'Wimbledon': '🎾 Wimbledon',
+                    'US Open': '🎾 US Open',
+                    'Masters': '⛳ Masters',
+                    'Ryder Cup': '⛳ Ryder Cup',
+                    'NHL': '🏒 NHL',
+                    'MLB': '⚾ MLB',
+                    'WNBA': '🏀 WNBA',
+                    'Fox News': '🦊 Fox News',
+                    'MSNBC': '📰 MSNBC',
+                    'CCTV': '📺 CCTV',
+                    'Euronews': '📰 Euronews',
+                    'France 24': '🇫🇷 France 24',
+                    'Deutsche Welle': '🇩🇪 DW',
+                    'RT': '📺 RT',
+                    'NHK World': '🇯🇵 NHK',
+                    'KBS World': '🇰🇷 KBS',
+                    'CNA': '🇸🇬 CNA'
+                };
+
+                function drawEmojiFallback(ctx, item, color) {
+                    ctx.clearRect(0, 0, 256, 128);
+                    ctx.beginPath();
+                    ctx.roundRect(20, 10, 216, 90, 30);
+                    ctx.fillStyle = 'rgba(10, 20, 40, 0.75)';
+                    ctx.fill();
+                    ctx.strokeStyle = color;
+                    ctx.lineWidth = 2;
+                    ctx.shadowBlur = 16;
+                    ctx.shadowColor = '#00aaff';
+                    ctx.beginPath();
+                    ctx.roundRect(20, 10, 216, 90, 30);
+                    ctx.stroke();
+                    
+                    ctx.shadowBlur = 24;
+                    ctx.shadowColor = '#00ccff';
+                    ctx.fillStyle = '#f0fcff';
+                    ctx.font = 'bold 26px "Inter", "Segoe UI", sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    let displayText = displayMap[item] || item;
+                    ctx.fillText(displayText, 128, 62);
+                }
+
+                if (!hasCustomImage) {
+                    drawEmojiFallback(ctx, item, color);
+                }
+
+                const texture = new THREE.CanvasTexture(canvasEl);
+                texture.needsUpdate = true;
+                
+                const spriteMat = new THREE.SpriteMaterial({
+                    map: texture,
+                    transparent: true,
+                    depthWrite: false,
+                    depthTest: true,
+                    opacity: 0.95,
+                    blending: THREE.NormalBlending,
+                });
+                const sprite = new THREE.Sprite(spriteMat);
+                sprite.scale.set(size * 1.8, size * 0.9, 1);
+                sprite.position.set(x, 0, z);
+                
+                group.add(sprite);
+            });
+            return group;
+        }
+
+        // Rings with worldwide channels & competitions
+        const sportsItems = [
+            'UEFA CL', 'NBA', 'FIFA WC', 'NFL', 'Formula 1',
+            'Premier League', 'La Liga', 'Bundesliga', 'Serie A', 'Ligue 1',
+            'Champions League', 'Europa League', 'Conference League',
+            'Copa América', 'MLS', 'Super Rugby', 'Six Nations', 'The Ashes', 'World Cup',
+            'Olympics', 'Tour de France', 'Wimbledon', 'US Open',
+            'Masters', 'Ryder Cup', 'NHL', 'MLB', 'WNBA',
+            'Copa Libertadores', 'AFC CL', 'CAF CL', 'OFC CL'
+        ];
+        const ring1 = createOrbitRing(2.2, 0.0, sportsItems, '#ffaa55', 0.55);
+        scene.add(ring1);
+
+        const streamItems = [
+            'Netflix', 'Hulu', 'Apple TV+', 'Disney+', 'HBO Max', 'Amazon Prime',
+            'Paramount+', 'Peacock', 'DAZN', 'ESPN'
+        ];
+        const ring2 = createOrbitRing(2.8, 0.15, streamItems, '#77ddff', 0.55);
+        scene.add(ring2);
+
+        const tvItems = [
+            'BBC World', 'CNN', 'Al Jazeera', 'beIN Sports', 'Sky News',
+            'Fox News', 'MSNBC', 'CCTV', 'Euronews', 'France 24',
+            'Deutsche Welle', 'RT', 'NHK World', 'KBS World', 'CNA'
+        ];
+        const ring3 = createOrbitRing(3.4, -0.1, tvItems, '#88dd88', 0.5);
+        scene.add(ring3);
+
+        const extraSports = [
+            'World Athletics', 'Swimming WC', 'Skiing WC', 'Cycling WC', 'Rugby WC'
+        ];
+        const ring4 = createOrbitRing(4.0, 0.05, extraSports, '#ff99cc', 0.45);
+        scene.add(ring4);
+
+        // Starfield
+        const starsGeo = new THREE.BufferGeometry();
+        const starsCount = 800;
+        const starsPos = new Float32Array(starsCount * 3);
+        for (let i = 0; i < starsCount * 3; i += 3) {
+            starsPos[i] = (Math.random() - 0.5) * 200;
+            starsPos[i+1] = (Math.random() - 0.5) * 200;
+            starsPos[i+2] = (Math.random() - 0.5) * 200 - 20;
+        }
+        starsGeo.setAttribute('position', new THREE.BufferAttribute(starsPos, 3));
+        const starsMat = new THREE.PointsMaterial({ color: 0x88aaff, size: 0.15, transparent: true });
+        const stars = new THREE.Points(starsGeo, starsMat);
+        scene.add(stars);
+
+        // Resize handler
+        function resizeRenderer() {
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            renderer.setSize(width, height);
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+        }
+        window.addEventListener('resize', resizeRenderer);
+        
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            earth.rotation.y += 0.0008;
+            glow.rotation.y += 0.0008;
+            
+            ring1.rotation.y += 0.0035;
+            ring2.rotation.y += 0.0022;
+            ring3.rotation.y += 0.0042;
+            ring4.rotation.y += 0.0050;
+            
+            stars.rotation.y += 0.0001;
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        // Canvas roundRect polyfill
+        if (!CanvasRenderingContext2D.prototype.roundRect) {
+            CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, radii) {
+                const r = typeof radii === 'number' ? radii : (radii || 0);
+                this.moveTo(x + r, y);
+                this.lineTo(x + w - r, y);
+                this.quadraticCurveTo(x + w, y, x + w, y + r);
+                this.lineTo(x + w, y + h - r);
+                this.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+                this.lineTo(x + r, y + h);
+                this.quadraticCurveTo(x, y + h, x, y + h - r);
+                this.lineTo(x, y + r);
+                this.quadraticCurveTo(x, y, x + r, y);
+                this.closePath();
+                return this;
+            };
+        }
+
+        setTimeout(resizeRenderer, 80);
+
+        // =============================================================
+        // 5. RENDER PRODUCT CARDS
+        // =============================================================
+        const EXTRA_CONNECTION_COST = 2.00;
+
         function calculatePrice(basePrice, connections) {
             const extraConnections = Math.max(0, connections - 1);
             return basePrice + (extraConnections * EXTRA_CONNECTION_COST);
         }
 
-        // =============================================================
-        // RENDER PRODUCTS
-        // =============================================================
         function renderProducts() {
             const container = document.getElementById('product-container');
             if (!container) return;
@@ -458,7 +1336,9 @@
                     <div class="glass-card p-6 hover:border-[#8B5CF6]/30 fade-in-up" id="product-${product.id}" data-product-id="${product.id}" data-max-connections="${maxConn}" data-is-fixed="${isFixed}" style="animation-delay: ${Math.random() * 0.3}s">
                         <div class="card-glow"></div>
                         <div class="flex items-start gap-4 mb-4">
-                            <div class="product-emblem"><span style="font-size:1.8rem;">${product.logo}</span></div>
+                            <div class="product-emblem">
+                                <span class="emblem-text">${product.logo}</span>
+                            </div>
                             <div class="flex-1 min-w-0">
                                 <div class="flex items-start justify-between gap-2">
                                     <h3 class="text-xl font-bold text-white truncate">${product.name}</h3>
@@ -505,9 +1385,6 @@
             initializeCTALinks();
         }
 
-        // =============================================================
-        // CONNECTION SELECTOR LOGIC
-        // =============================================================
         function initializeConnectionSelectors() {
             document.querySelectorAll('.connection-selector').forEach(selector => {
                 const productId = selector.dataset.productId;
@@ -573,7 +1450,7 @@
         }
 
         // =============================================================
-        // MOBILE MENU
+        // 6. MOBILE MENU
         // =============================================================
         document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
@@ -583,13 +1460,15 @@
         });
 
         // =============================================================
-        // INITIALIZE
+        // 7. INITIALIZE
         // =============================================================
         document.addEventListener('DOMContentLoaded', function() {
             renderProducts();
-            console.log('🚀 Stream8K - Ultimate IPTV Platform Loaded');
+            console.log('🚀 Stream8K - Ultimate IPTV Platform with 3D Globe Loaded');
             console.log(`📦 ${productsData.length} Products Rendered`);
             console.log('📱 WhatsApp: +212 670-969291');
+            console.log('🌍 3D Globe with Channel Logos Active');
+            console.log('🖼️ Channel Logos: Edit the "channelImages" object to add your custom logos at domain/worldimages/');
         });
     </script>
 
