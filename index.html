@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8kstream · Premium IPTV Subscription – 8K/4K/FHD</title>
-    <meta name="description" content="Premium 8K IPTV subscription with 50,000+ channels, 160,000+ VOD, 4K UHD quality, anti-freeze, 99.9% uptime, and 24/7 support. Instant activation in under 5 minutes." />
+    <title>8kstream · Premium IPTV Subscription & Reseller</title>
+    <meta name="description" content="Premium 8K IPTV subscription and reseller panels. 50,000+ channels, 160,000+ VOD, 4K UHD, anti-freeze, 99.9% uptime, 24/7 support." />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -223,6 +223,16 @@
             .modal-box { padding: 24px 18px; }
             .modal-contact-buttons { flex-direction: column; }
         }
+        .reseller-badge {
+            background: linear-gradient(135deg, #8b5cf6, #60a5fa);
+            color: #fff;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 60px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
     </style>
 </head>
 <body>
@@ -234,8 +244,8 @@
         <div class="hidden md:flex items-center gap-8 text-slate-300 text-sm">
             <a href="#features" class="hover:text-purple-400 transition">Features</a>
             <a href="#pricing" class="hover:text-purple-400 transition">Pricing</a>
-            <a href="#reviews" class="hover:text-purple-400 transition">Reviews</a>
             <a href="#reseller" class="hover:text-purple-400 transition">Reseller</a>
+            <a href="#reviews" class="hover:text-purple-400 transition">Reviews</a>
             <a href="#contact" class="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-full text-sm font-medium transition shadow-lg shadow-purple-600/20">Get Started</a>
         </div>
         <button class="md:hidden text-slate-300 text-xl"><i class="fas fa-bars"></i></button>
@@ -261,8 +271,8 @@
     </div>
     <div class="flex flex-wrap justify-center gap-4 mt-10">
         <a href="#pricing" class="btn-primary text-white font-semibold px-8 py-3.5 rounded-full shadow-lg shadow-purple-600/25"><i class="fas fa-crown mr-2"></i>View Plans</a>
+        <a href="#reseller" class="btn-outline text-white font-semibold px-8 py-3.5 rounded-full"><i class="fas fa-store mr-2 text-purple-400"></i>Reseller</a>
         <a href="#contact" class="btn-outline text-white font-semibold px-8 py-3.5 rounded-full"><i class="fab fa-whatsapp mr-2 text-green-400"></i>Free Trial</a>
-        <a href="#contact" class="btn-outline text-white font-semibold px-8 py-3.5 rounded-full"><i class="fab fa-telegram mr-2 text-blue-400"></i>Telegram</a>
     </div>
 </section>
 
@@ -316,7 +326,7 @@
     </div>
 </section>
 
-<!-- ===== PRICING - YOUR PRODUCTS WITH DESCRIPTIONS ===== -->
+<!-- ===== PRICING - SUBSCRIPTION PLANS ===== -->
 <section id="pricing" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="text-center mb-14">
         <h2 class="text-3xl md:text-4xl font-bold text-white">8kstream <span class="gradient-text">subscription plans</span></h2>
@@ -666,20 +676,336 @@
     </div>
 </section>
 
-<!-- ===== RESELLER ===== -->
+<!-- ===== RESELLER PANELS SECTION ===== -->
 <section id="reseller" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-y border-slate-800/50">
     <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-white">Become a <span class="gradient-text">8kstream Reseller</span></h2>
-        <p class="text-slate-400 max-w-2xl mx-auto mt-2">Build a recurring income stream by reselling the most reliable IPTV service. Get wholesale pricing, your own panel and 24/7 support.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Start <span class="gradient-text">Reselling</span> Today</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto mt-2">Get wholesale pricing, your own panel, and 24/7 support. Build a recurring income stream with our premium IPTV servers.</p>
     </div>
-    <div class="grid md:grid-cols-4 gap-4 text-center">
+
+    <!-- Reseller Stats -->
+    <div class="grid md:grid-cols-4 gap-4 text-center mb-12">
         <div class="card-glass rounded-2xl p-6"><div class="stat-number text-3xl">$2K+</div><div class="text-slate-400 text-sm">Avg. monthly earnings</div></div>
         <div class="card-glass rounded-2xl p-6"><div class="stat-number text-3xl">10</div><div class="text-slate-400 text-sm">Min. credits to start</div></div>
         <div class="card-glass rounded-2xl p-6"><div class="stat-number text-3xl">5min</div><div class="text-slate-400 text-sm">Panel setup</div></div>
         <div class="card-glass rounded-2xl p-6"><div class="stat-number text-3xl">70%</div><div class="text-slate-400 text-sm">Profit margin</div></div>
     </div>
-    <div class="text-center mt-8">
-        <a href="#contact" class="btn-primary text-white font-semibold px-10 py-3.5 rounded-full shadow-lg shadow-purple-600/25"><i class="fas fa-store mr-2"></i>Start Reselling</a>
+
+    <!-- Reseller Server Cards -->
+    <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+        <!-- DINO Reseller -->
+        <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Dino IPTV Reseller" data-type="reseller" data-max-conn="1">
+            <div class="flex items-center gap-3 mb-1">
+                <div class="logo-placeholder">D</div>
+                <h3 class="text-lg font-bold text-white">Dino IPTV</h3>
+            </div>
+            <div><span class="reseller-badge">Reseller Panel</span></div>
+            <p class="text-slate-400 text-xs mt-2 flex-1">120 credits · €99 · Cost-effective panel with EPG support</p>
+            <ul class="text-xs text-slate-300 space-y-0.5 mt-1">
+                <li><i class="fas fa-check feature-check mr-1"></i>Full HD / 4K Quality</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Single Device Access (1 Connection)</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Stable &amp; Fast Servers</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>24/7 Support</li>
+            </ul>
+            <div class="border-t border-slate-700/50 mt-3 pt-3">
+                <div class="grid grid-cols-2 gap-1 text-sm">
+                    <span class="text-slate-400">Credits</span><span class="text-purple-400 font-semibold text-right">120</span>
+                    <span class="text-slate-400">Price</span><span class="text-purple-400 font-semibold text-right">€99</span>
+                </div>
+            </div>
+            <div class="flex gap-2 mt-3">
+                <button onclick="openModal(this)" class="btn-primary text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fas fa-store mr-1"></i>Get Panel</button>
+                <button onclick="openModal(this, true)" class="btn-whatsapp text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fab fa-whatsapp mr-1"></i>Inquire</button>
+            </div>
+        </div>
+
+        <!-- LION Reseller -->
+        <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Lion OTT Reseller" data-type="reseller" data-max-conn="1">
+            <div class="flex items-center gap-3 mb-1">
+                <div class="logo-placeholder">L</div>
+                <h3 class="text-lg font-bold text-white">Lion OTT</h3>
+            </div>
+            <div><span class="reseller-badge">Reseller Panel</span></div>
+            <p class="text-slate-400 text-xs mt-2 flex-1">10 credits · €79 · Reliable OTT panel with great variety</p>
+            <ul class="text-xs text-slate-300 space-y-0.5 mt-1">
+                <li><i class="fas fa-check feature-check mr-1"></i>Full HD / 4K Quality</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Single Device Access (1 Connection)</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Stable &amp; Fast Servers</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>24/7 Support</li>
+            </ul>
+            <div class="border-t border-slate-700/50 mt-3 pt-3">
+                <div class="grid grid-cols-2 gap-1 text-sm">
+                    <span class="text-slate-400">Credits</span><span class="text-purple-400 font-semibold text-right">10</span>
+                    <span class="text-slate-400">Price</span><span class="text-purple-400 font-semibold text-right">€79</span>
+                </div>
+            </div>
+            <div class="flex gap-2 mt-3">
+                <button onclick="openModal(this)" class="btn-primary text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fas fa-store mr-1"></i>Get Panel</button>
+                <button onclick="openModal(this, true)" class="btn-whatsapp text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fab fa-whatsapp mr-1"></i>Inquire</button>
+            </div>
+        </div>
+
+        <!-- CRYSTAL Reseller -->
+        <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Crystal IPTV Reseller" data-type="reseller" data-max-conn="1">
+            <div class="flex items-center gap-3 mb-1">
+                <div class="logo-placeholder">Cr</div>
+                <h3 class="text-lg font-bold text-white">Crystal IPTV</h3>
+            </div>
+            <div><span class="reseller-badge">Reseller Panel</span></div>
+            <p class="text-slate-400 text-xs mt-2 flex-1">10 credits · €79 · Premium 8K/4K panel with anti-freeze</p>
+            <ul class="text-xs text-slate-300 space-y-0.5 mt-1">
+                <li><i class="fas fa-check feature-check mr-1"></i>8K / 4K Quality</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Single Device Access (1 Connection)</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Anti-Freeze Technology</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>24/7 Support</li>
+            </ul>
+            <div class="border-t border-slate-700/50 mt-3 pt-3">
+                <div class="grid grid-cols-2 gap-1 text-sm">
+                    <span class="text-slate-400">Credits</span><span class="text-purple-400 font-semibold text-right">10</span>
+                    <span class="text-slate-400">Price</span><span class="text-purple-400 font-semibold text-right">€79</span>
+                </div>
+            </div>
+            <div class="flex gap-2 mt-3">
+                <button onclick="openModal(this)" class="btn-primary text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fas fa-store mr-1"></i>Get Panel</button>
+                <button onclick="openModal(this, true)" class="btn-whatsapp text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fab fa-whatsapp mr-1"></i>Inquire</button>
+            </div>
+        </div>
+
+        <!-- NEXON Reseller -->
+        <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Nexon IPTV Reseller" data-type="reseller" data-max-conn="1">
+            <div class="flex items-center gap-3 mb-1">
+                <div class="logo-placeholder">N</div>
+                <h3 class="text-lg font-bold text-white">Nexon IPTV</h3>
+            </div>
+            <div><span class="reseller-badge">Reseller Panel</span></div>
+            <p class="text-slate-400 text-xs mt-2 flex-1">10 credits · €79 · High-performance single-connection panel</p>
+            <ul class="text-xs text-slate-300 space-y-0.5 mt-1">
+                <li><i class="fas fa-check feature-check mr-1"></i>Full HD / 4K Quality</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Single Device Access (1 Connection)</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Stable &amp; Fast Servers</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>24/7 Support</li>
+            </ul>
+            <div class="border-t border-slate-700/50 mt-3 pt-3">
+                <div class="grid grid-cols-2 gap-1 text-sm">
+                    <span class="text-slate-400">Credits</span><span class="text-purple-400 font-semibold text-right">10</span>
+                    <span class="text-slate-400">Price</span><span class="text-purple-400 font-semibold text-right">€79</span>
+                </div>
+            </div>
+            <div class="flex gap-2 mt-3">
+                <button onclick="openModal(this)" class="btn-primary text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fas fa-store mr-1"></i>Get Panel</button>
+                <button onclick="openModal(this, true)" class="btn-whatsapp text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fab fa-whatsapp mr-1"></i>Inquire</button>
+            </div>
+        </div>
+
+        <!-- MAGNUM OTT Reseller (multi-connection) -->
+        <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Magnum OTT Reseller" data-type="reseller" data-max-conn="5">
+            <div class="flex items-center gap-3 mb-1">
+                <div class="logo-placeholder">M</div>
+                <h3 class="text-lg font-bold text-white">Magnum OTT</h3>
+            </div>
+            <div><span class="reseller-badge">Reseller Panel</span></div>
+            <p class="text-slate-400 text-xs mt-2 flex-1">10 credits · €129 · Powerful multi-device panel with credits system</p>
+            <ul class="text-xs text-slate-300 space-y-0.5 mt-1">
+                <li><i class="fas fa-check feature-check mr-1"></i>Full HD / 4K Quality</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Multi-Device Support (Up to 5)</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Stable &amp; Fast Servers</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>24/7 Support</li>
+            </ul>
+            <div class="border-t border-slate-700/50 mt-3 pt-3">
+                <div class="grid grid-cols-2 gap-1 text-sm">
+                    <span class="text-slate-400">Credits</span><span class="text-purple-400 font-semibold text-right">10</span>
+                    <span class="text-slate-400">Price</span><span class="text-purple-400 font-semibold text-right">€129</span>
+                </div>
+            </div>
+            <div class="flex gap-2 mt-3">
+                <button onclick="openModal(this)" class="btn-primary text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fas fa-store mr-1"></i>Get Panel</button>
+                <button onclick="openModal(this, true)" class="btn-whatsapp text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fab fa-whatsapp mr-1"></i>Inquire</button>
+            </div>
+        </div>
+
+        <!-- MEGA OTT Reseller (multi-connection) -->
+        <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Mega OTT Reseller" data-type="reseller" data-max-conn="3">
+            <div class="flex items-center gap-3 mb-1">
+                <div class="logo-placeholder">Mg</div>
+                <h3 class="text-lg font-bold text-white">Mega OTT</h3>
+            </div>
+            <div><span class="reseller-badge">Reseller Panel</span></div>
+            <p class="text-slate-400 text-xs mt-2 flex-1">10 credits · €99 · Great value multi-device panel for families</p>
+            <ul class="text-xs text-slate-300 space-y-0.5 mt-1">
+                <li><i class="fas fa-check feature-check mr-1"></i>Full HD / 4K Quality</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Multi-Device Support (Up to 3)</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Stable &amp; Fast Servers</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>24/7 Support</li>
+            </ul>
+            <div class="border-t border-slate-700/50 mt-3 pt-3">
+                <div class="grid grid-cols-2 gap-1 text-sm">
+                    <span class="text-slate-400">Credits</span><span class="text-purple-400 font-semibold text-right">10</span>
+                    <span class="text-slate-400">Price</span><span class="text-purple-400 font-semibold text-right">€99</span>
+                </div>
+            </div>
+            <div class="flex gap-2 mt-3">
+                <button onclick="openModal(this)" class="btn-primary text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fas fa-store mr-1"></i>Get Panel</button>
+                <button onclick="openModal(this, true)" class="btn-whatsapp text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fab fa-whatsapp mr-1"></i>Inquire</button>
+            </div>
+        </div>
+
+        <!-- INFINITY Reseller (multi-connection) -->
+        <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Infinity IPTV Reseller" data-type="reseller" data-max-conn="2">
+            <div class="flex items-center gap-3 mb-1">
+                <div class="logo-placeholder">∞</div>
+                <h3 class="text-lg font-bold text-white">Infinity IPTV</h3>
+            </div>
+            <div><span class="reseller-badge">Reseller Panel</span></div>
+            <p class="text-slate-400 text-xs mt-2 flex-1">10 credits · €195 · Premium 8K panel with advanced anti-freeze</p>
+            <ul class="text-xs text-slate-300 space-y-0.5 mt-1">
+                <li><i class="fas fa-check feature-check mr-1"></i>8K / 4K Quality</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Multi-Device Support (Up to 2)</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Anti-Freeze Technology</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>24/7 Support</li>
+            </ul>
+            <div class="border-t border-slate-700/50 mt-3 pt-3">
+                <div class="grid grid-cols-2 gap-1 text-sm">
+                    <span class="text-slate-400">Credits</span><span class="text-purple-400 font-semibold text-right">10</span>
+                    <span class="text-slate-400">Price</span><span class="text-purple-400 font-semibold text-right">€195</span>
+                </div>
+            </div>
+            <div class="flex gap-2 mt-3">
+                <button onclick="openModal(this)" class="btn-primary text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fas fa-store mr-1"></i>Get Panel</button>
+                <button onclick="openModal(this, true)" class="btn-whatsapp text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fab fa-whatsapp mr-1"></i>Inquire</button>
+            </div>
+        </div>
+
+        <!-- TREX IPTV Reseller -->
+        <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Trex IPTV Reseller" data-type="reseller" data-max-conn="1">
+            <div class="flex items-center gap-3 mb-1">
+                <div class="logo-placeholder">T</div>
+                <h3 class="text-lg font-bold text-white">Trex IPTV</h3>
+            </div>
+            <div><span class="reseller-badge">Reseller Panel</span></div>
+            <p class="text-slate-400 text-xs mt-2 flex-1">120 credits · €185 · Massive channel library with 38k+ channels</p>
+            <ul class="text-xs text-slate-300 space-y-0.5 mt-1">
+                <li><i class="fas fa-check feature-check mr-1"></i>Full HD / 4K Quality</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Single Device Access (1 Connection)</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>M3U/MAG/Enigma2 Support</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>24/7 Support</li>
+            </ul>
+            <div class="border-t border-slate-700/50 mt-3 pt-3">
+                <div class="grid grid-cols-2 gap-1 text-sm">
+                    <span class="text-slate-400">Credits</span><span class="text-purple-400 font-semibold text-right">120</span>
+                    <span class="text-slate-400">Price</span><span class="text-purple-400 font-semibold text-right">€185</span>
+                </div>
+            </div>
+            <div class="flex gap-2 mt-3">
+                <button onclick="openModal(this)" class="btn-primary text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fas fa-store mr-1"></i>Get Panel</button>
+                <button onclick="openModal(this, true)" class="btn-whatsapp text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fab fa-whatsapp mr-1"></i>Inquire</button>
+            </div>
+        </div>
+
+        <!-- 8K STRONG Reseller -->
+        <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="8K Strong Reseller" data-type="reseller" data-max-conn="1">
+            <div class="flex items-center gap-3 mb-1">
+                <div class="logo-placeholder">8K</div>
+                <h3 class="text-lg font-bold text-white">8K Strong</h3>
+            </div>
+            <div><span class="reseller-badge">Reseller Panel</span></div>
+            <p class="text-slate-400 text-xs mt-2 flex-1">120 credits · €190 · Ultra-reliable 8K panel for power users</p>
+            <ul class="text-xs text-slate-300 space-y-0.5 mt-1">
+                <li><i class="fas fa-check feature-check mr-1"></i>8K / 4K Quality</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Single Device Access (1 Connection)</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Stable &amp; Fast Servers</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>24/7 Support</li>
+            </ul>
+            <div class="border-t border-slate-700/50 mt-3 pt-3">
+                <div class="grid grid-cols-2 gap-1 text-sm">
+                    <span class="text-slate-400">Credits</span><span class="text-purple-400 font-semibold text-right">120</span>
+                    <span class="text-slate-400">Price</span><span class="text-purple-400 font-semibold text-right">€190</span>
+                </div>
+            </div>
+            <div class="flex gap-2 mt-3">
+                <button onclick="openModal(this)" class="btn-primary text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fas fa-store mr-1"></i>Get Panel</button>
+                <button onclick="openModal(this, true)" class="btn-whatsapp text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fab fa-whatsapp mr-1"></i>Inquire</button>
+            </div>
+        </div>
+
+        <!-- TIVIONE Reseller -->
+        <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Tivione IPTV Reseller" data-type="reseller" data-max-conn="1">
+            <div class="flex items-center gap-3 mb-1">
+                <div class="logo-placeholder">Ti</div>
+                <h3 class="text-lg font-bold text-white">Tivione IPTV</h3>
+            </div>
+            <div><span class="reseller-badge">Reseller Panel</span></div>
+            <p class="text-slate-400 text-xs mt-2 flex-1">10 credits · €190 · Stable panel with solid channel lineup</p>
+            <ul class="text-xs text-slate-300 space-y-0.5 mt-1">
+                <li><i class="fas fa-check feature-check mr-1"></i>Full HD / 4K Quality</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Single Device Access (1 Connection)</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Stable &amp; Fast Servers</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>24/7 Support</li>
+            </ul>
+            <div class="border-t border-slate-700/50 mt-3 pt-3">
+                <div class="grid grid-cols-2 gap-1 text-sm">
+                    <span class="text-slate-400">Credits</span><span class="text-purple-400 font-semibold text-right">10</span>
+                    <span class="text-slate-400">Price</span><span class="text-purple-400 font-semibold text-right">€190</span>
+                </div>
+            </div>
+            <div class="flex gap-2 mt-3">
+                <button onclick="openModal(this)" class="btn-primary text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fas fa-store mr-1"></i>Get Panel</button>
+                <button onclick="openModal(this, true)" class="btn-whatsapp text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fab fa-whatsapp mr-1"></i>Inquire</button>
+            </div>
+        </div>
+
+        <!-- ULTRA 8K Reseller -->
+        <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Ultra 8K Reseller" data-type="reseller" data-max-conn="1">
+            <div class="flex items-center gap-3 mb-1">
+                <div class="logo-placeholder">U8</div>
+                <h3 class="text-lg font-bold text-white">Ultra 8K</h3>
+            </div>
+            <div><span class="reseller-badge">Reseller Panel</span></div>
+            <p class="text-slate-400 text-xs mt-2 flex-1">10 credits · €190 · Enthusiast-grade 8K panel</p>
+            <ul class="text-xs text-slate-300 space-y-0.5 mt-1">
+                <li><i class="fas fa-check feature-check mr-1"></i>8K / 4K Quality</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Single Device Access (1 Connection)</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Stable &amp; Fast Servers</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>24/7 Support</li>
+            </ul>
+            <div class="border-t border-slate-700/50 mt-3 pt-3">
+                <div class="grid grid-cols-2 gap-1 text-sm">
+                    <span class="text-slate-400">Credits</span><span class="text-purple-400 font-semibold text-right">10</span>
+                    <span class="text-slate-400">Price</span><span class="text-purple-400 font-semibold text-right">€190</span>
+                </div>
+            </div>
+            <div class="flex gap-2 mt-3">
+                <button onclick="openModal(this)" class="btn-primary text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fas fa-store mr-1"></i>Get Panel</button>
+                <button onclick="openModal(this, true)" class="btn-whatsapp text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fab fa-whatsapp mr-1"></i>Inquire</button>
+            </div>
+        </div>
+
+        <!-- DREAM24K Reseller -->
+        <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Dream 24K Reseller" data-type="reseller" data-max-conn="1">
+            <div class="flex items-center gap-3 mb-1">
+                <div class="logo-placeholder">D24</div>
+                <h3 class="text-lg font-bold text-white">Dream 24K</h3>
+            </div>
+            <div><span class="reseller-badge">Reseller Panel</span></div>
+            <p class="text-slate-400 text-xs mt-2 flex-1">120 credits · €139 · Exceptional clarity panel with stable streams</p>
+            <ul class="text-xs text-slate-300 space-y-0.5 mt-1">
+                <li><i class="fas fa-check feature-check mr-1"></i>8K / 4K Quality</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Single Device Access (1 Connection)</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>Stable &amp; Fast Servers</li>
+                <li><i class="fas fa-check feature-check mr-1"></i>24/7 Support</li>
+            </ul>
+            <div class="border-t border-slate-700/50 mt-3 pt-3">
+                <div class="grid grid-cols-2 gap-1 text-sm">
+                    <span class="text-slate-400">Credits</span><span class="text-purple-400 font-semibold text-right">120</span>
+                    <span class="text-slate-400">Price</span><span class="text-purple-400 font-semibold text-right">€139</span>
+                </div>
+            </div>
+            <div class="flex gap-2 mt-3">
+                <button onclick="openModal(this)" class="btn-primary text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fas fa-store mr-1"></i>Get Panel</button>
+                <button onclick="openModal(this, true)" class="btn-whatsapp text-white font-semibold py-2 rounded-xl flex-1 text-sm"><i class="fab fa-whatsapp mr-1"></i>Inquire</button>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -738,13 +1064,13 @@
         <div class="flex gap-6 text-slate-400 text-sm">
             <a href="#" class="hover:text-purple-400 transition">Home</a>
             <a href="#pricing" class="hover:text-purple-400 transition">Pricing</a>
-            <a href="#features" class="hover:text-purple-400 transition">Features</a>
             <a href="#reseller" class="hover:text-purple-400 transition">Reseller</a>
+            <a href="#features" class="hover:text-purple-400 transition">Features</a>
             <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
         </div>
     </div>
     <div class="text-center text-slate-500 text-xs mt-6 border-t border-slate-800/30 pt-4">
-        &copy; 2026 8kstream.net — Premium IPTV Subscription. All rights reserved.
+        &copy; 2026 8kstream.net — Premium IPTV Subscription &amp; Reseller. All rights reserved.
     </div>
 </footer>
 
@@ -775,43 +1101,51 @@
     let maxConnections = 1;
     let currentConnections = 1;
     let isFreeTrial = false;
+    let isReseller = false;
 
     function openModal(button, freeTrial = false) {
         const card = button.closest('.pricing-card');
         currentServer = card.dataset.server || 'Server';
         currentType = card.dataset.type || 'subscription';
         isFreeTrial = freeTrial;
+        isReseller = currentType === 'reseller';
         maxConnections = parseInt(card.dataset.maxConn) || 1;
         
-        // Get prices from the card
+        // Get prices from the card - handle both subscription and reseller formats
         const priceCells = card.querySelectorAll('.grid-cols-2 .text-purple-400');
         currentPrices = {};
         const periods = ['1', '3', '6', '12'];
-        priceCells.forEach((cell, index) => {
-            if (index < periods.length) {
+        let priceIndex = 0;
+        priceCells.forEach((cell) => {
+            if (priceIndex < periods.length) {
                 const priceText = cell.textContent.trim();
                 const priceMatch = priceText.match(/[\d,]+\.?[\d]*/);
                 if (priceMatch) {
-                    currentPrices[periods[index]] = parseFloat(priceMatch[0].replace(',', '.'));
+                    currentPrices[periods[priceIndex]] = parseFloat(priceMatch[0].replace(',', '.'));
                 }
+                priceIndex++;
             }
         });
 
-        // If multi-connection, use base prices from data attribute
-        if (maxConnections > 1 && card.dataset.basePrices) {
-            try {
-                const basePrices = JSON.parse(card.dataset.basePrices);
-                if (basePrices['1']) currentPrices = basePrices;
-            } catch(e) {}
+        // If no prices found (reseller cards with credits), use the price from the grid
+        if (Object.keys(currentPrices).length === 0) {
+            const priceText = card.querySelector('.grid-cols-2 .text-purple-400')?.textContent || '';
+            const priceMatch = priceText.match(/[\d,]+\.?[\d]*/);
+            if (priceMatch) {
+                const basePrice = parseFloat(priceMatch[0].replace(',', '.'));
+                currentPrices = { '1': basePrice, '3': basePrice, '6': basePrice, '12': basePrice };
+            }
         }
 
+        // For reseller, adjust period labels
+        const isResellerType = currentType === 'reseller';
         document.getElementById('modalServerName').textContent = currentServer;
-        document.getElementById('modalType').textContent = isFreeTrial ? 'Free Trial' : 'Subscription';
+        document.getElementById('modalType').textContent = isFreeTrial ? 'Free Trial' : (isResellerType ? 'Reseller Panel' : 'Subscription');
         
         // Build connection selector if multi-connection
         const connContainer = document.getElementById('connectionSelectorContainer');
         connContainer.innerHTML = '';
-        if (maxConnections > 1) {
+        if (maxConnections > 1 && !isResellerType) {
             connContainer.innerHTML = `
                 <div class="connection-selector-modal">
                     <label for="modalConnections"><i class="fas fa-users"></i> Connections:</label>
@@ -833,10 +1167,10 @@
         planOptions.innerHTML = '';
         
         const periodsList = [
-            { key: '1', label: '1 Month' },
-            { key: '3', label: '3 Months' },
-            { key: '6', label: '6 Months' },
-            { key: '12', label: '12 Months' }
+            { key: '1', label: isResellerType ? '1 Credit' : '1 Month' },
+            { key: '3', label: isResellerType ? '3 Credits' : '3 Months' },
+            { key: '6', label: isResellerType ? '6 Credits' : '6 Months' },
+            { key: '12', label: isResellerType ? '12 Credits' : '12 Months' }
         ];
 
         periodsList.forEach(p => {
@@ -845,7 +1179,7 @@
                 const div = document.createElement('div');
                 div.className = 'plan-option' + (p.key === '1' ? ' selected' : '');
                 div.dataset.period = p.key;
-                const displayPrice = maxConnections > 1 ? (price * currentConnections) : price;
+                const displayPrice = (maxConnections > 1 && !isResellerType) ? (price * currentConnections) : price;
                 div.innerHTML = `
                     <span class="period">${p.label}</span>
                     <span class="price">${displayPrice.toFixed(2)} €</span>
@@ -868,25 +1202,22 @@
         const select = document.getElementById('modalConnections');
         if (select) {
             currentConnections = parseInt(select.value);
-            // Update price display
             const priceSpan = document.getElementById('modalConnPrice');
             const basePrice = currentPrices['1'] || 0;
             priceSpan.textContent = (basePrice * currentConnections).toFixed(2) + ' €';
             
-            // Update plan option prices
             const planOptions = document.querySelectorAll('.plan-option');
             const periods = ['1', '3', '6', '12'];
             planOptions.forEach((el, index) => {
                 if (index < periods.length) {
                     const price = currentPrices[periods[index]];
                     if (price !== undefined) {
-                        const displayPrice = maxConnections > 1 ? (price * currentConnections) : price;
+                        const displayPrice = (maxConnections > 1 && !isReseller) ? (price * currentConnections) : price;
                         el.querySelector('.price').textContent = displayPrice.toFixed(2) + ' €';
                     }
                 }
             });
             
-            // Update selected link
             const selected = document.querySelector('.plan-option.selected');
             if (selected) {
                 updateModalLinks(selected.dataset.period);
@@ -896,12 +1227,12 @@
 
     function updateModalLinks(period) {
         const price = currentPrices[period] || 0;
-        const displayPrice = maxConnections > 1 ? (price * currentConnections) : price;
-        const typeLabel = isFreeTrial ? 'Free Trial' : 'Subscription';
-        const connText = maxConnections > 1 ? ` (${currentConnections} connection${currentConnections > 1 ? 's' : ''})` : '';
+        const displayPrice = (maxConnections > 1 && !isReseller) ? (price * currentConnections) : price;
+        const typeLabel = isFreeTrial ? 'Free Trial' : (isReseller ? 'Reseller Panel' : 'Subscription');
+        const connText = (maxConnections > 1 && !isReseller) ? ` (${currentConnections} connection${currentConnections > 1 ? 's' : ''})` : '';
         const message = isFreeTrial 
             ? `Hi, I want to request a FREE TRIAL for ${currentServer}${connText}. Please provide details.`
-            : `Hi, I want to subscribe to ${currentServer} (${typeLabel})${connText} - ${period} month(s) - ${displayPrice.toFixed(2)} €. Please provide payment details.`;
+            : `Hi, I want to ${isReseller ? 'get the reseller panel for' : 'subscribe to'} ${currentServer} (${typeLabel})${connText} - ${period} ${isReseller ? 'credit(s)' : 'month(s) '} - ${displayPrice.toFixed(2)} €. Please provide payment details.`;
         const encoded = encodeURIComponent(message);
         document.getElementById('modalWaLink').href = `https://wa.me/212670969192?text=${encoded}`;
         document.getElementById('modalTgLink').href = `https://t.me/reselleriptvcom?text=${encoded}`;
