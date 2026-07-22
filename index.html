@@ -84,19 +84,18 @@
             border: 1px solid rgba(96, 165, 250, 0.25);
             color: #60a5fa;
         }
-        .logo-placeholder {
+        /* Product logo styling - .webp images */
+        .product-logo {
             width: 48px;
             height: 48px;
-            background: #1f2a3a;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: #cbd5e1;
+            object-fit: cover;
             border: 2px solid #314152;
             flex-shrink: 0;
+            background: #1f2a3a;
+        }
+        .product-logo:hover {
+            border-color: #8b5cf6;
         }
         .feature-check {
             color: #8b5cf6;
@@ -222,6 +221,7 @@
             .stat-number { font-size: 1.8rem; }
             .modal-box { padding: 24px 18px; }
             .modal-contact-buttons { flex-direction: column; }
+            .product-logo { width: 40px; height: 40px; }
         }
         .reseller-badge {
             background: linear-gradient(135deg, #8b5cf6, #60a5fa);
@@ -233,6 +233,21 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
+        /* Hero video/gif styling */
+        .hero-video {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        @media (max-width: 768px) {
+            .hero-video {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -240,7 +255,10 @@
 <!-- ===== NAVBAR ===== -->
 <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 border-b border-slate-800/50">
     <div class="flex justify-between items-center">
-        <span class="text-2xl font-extrabold gradient-text">8kstream.net</span>
+        <!-- Logo with SEO-friendly alt text -->
+        <a href="#" class="flex items-center gap-3">
+            <img src="logo.webp" alt="8kstream.net - Premium IPTV Provider" class="h-10 w-auto max-w-[180px] object-contain" />
+        </a>
         <div class="hidden md:flex items-center gap-8 text-slate-300 text-sm">
             <a href="#features" class="hover:text-purple-400 transition">Features</a>
             <a href="#pricing" class="hover:text-purple-400 transition">Pricing</a>
@@ -253,26 +271,40 @@
 </nav>
 
 <!-- ===== HERO ===== -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
-    <div class="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-6">
-        <i class="fas fa-bolt"></i> <span>#1 Premium IPTV Service · 2026</span>
-    </div>
-    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-        <span class="text-white">Best 8K IPTV Subscription —</span><br />
-        <span class="gradient-text">50,000+ Channels &amp; 160,000+ VOD</span>
-    </h1>
-    <p class="text-slate-400 text-lg max-w-3xl mx-auto mt-4">
-        Stream live TV, blockbuster movies and trending series in stunning 4K Ultra HD. Instant activation in under 5 minutes — works on every device you own.
-    </p>
-    <div class="flex flex-wrap justify-center items-center gap-6 mt-6 text-slate-300 text-sm">
-        <span><i class="fas fa-star text-yellow-400"></i> 4.9/5 · 2,400+ reviews</span>
-        <span><i class="fas fa-circle-check text-green-400"></i> 99.9% uptime</span>
-        <span><i class="fas fa-bolt text-purple-400"></i> 5-min activation</span>
-    </div>
-    <div class="flex flex-wrap justify-center gap-4 mt-10">
-        <a href="#pricing" class="btn-primary text-white font-semibold px-8 py-3.5 rounded-full shadow-lg shadow-purple-600/25"><i class="fas fa-crown mr-2"></i>View Plans</a>
-        <a href="#reseller" class="btn-outline text-white font-semibold px-8 py-3.5 rounded-full"><i class="fas fa-store mr-2 text-purple-400"></i>Reseller</a>
-        <a href="#contact" class="btn-outline text-white font-semibold px-8 py-3.5 rounded-full"><i class="fab fa-whatsapp mr-2 text-green-400"></i>Free Trial</a>
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Hero Text Content -->
+        <div class="text-center md:text-left">
+            <div class="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-6">
+                <i class="fas fa-bolt"></i> <span>#1 Premium IPTV Service · 2026</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+                <span class="text-white">Best 8K IPTV Subscription —</span><br />
+                <span class="gradient-text">50,000+ Channels &amp; 160,000+ VOD</span>
+            </h1>
+            <p class="text-slate-400 text-lg max-w-2xl mt-4">
+                Stream live TV, blockbuster movies and trending series in stunning 4K Ultra HD. Instant activation in under 5 minutes — works on every device you own.
+            </p>
+            <div class="flex flex-wrap items-center gap-6 mt-6 text-slate-300 text-sm">
+                <span><i class="fas fa-star text-yellow-400"></i> 4.9/5 · 2,400+ reviews</span>
+                <span><i class="fas fa-circle-check text-green-400"></i> 99.9% uptime</span>
+                <span><i class="fas fa-bolt text-purple-400"></i> 5-min activation</span>
+            </div>
+            <div class="flex flex-wrap gap-4 mt-8">
+                <a href="#pricing" class="btn-primary text-white font-semibold px-8 py-3.5 rounded-full shadow-lg shadow-purple-600/25"><i class="fas fa-crown mr-2"></i>View Plans</a>
+                <a href="#reseller" class="btn-outline text-white font-semibold px-8 py-3.5 rounded-full"><i class="fas fa-store mr-2 text-purple-400"></i>Reseller</a>
+                <a href="#contact" class="btn-outline text-white font-semibold px-8 py-3.5 rounded-full"><i class="fab fa-whatsapp mr-2 text-green-400"></i>Free Trial</a>
+            </div>
+        </div>
+        <!-- Hero Video / GIF -->
+        <div class="flex justify-center">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="hero-video.webm" type="video/webm">
+                <source src="hero-video.mp4" type="video/mp4">
+                <!-- Fallback GIF if video not supported -->
+                <img src="hero.gif" alt="8kstream IPTV - Premium Streaming Experience" class="hero-video" />
+            </video>
+        </div>
     </div>
 </section>
 
@@ -337,7 +369,7 @@
         <!-- DINO -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Dino IPTV" data-type="subscription" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">D</div>
+                <img src="dinoiptv.webp" alt="Dino IPTV - Premium IPTV Server" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3ED%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Dino IPTV</h3>
             </div>
             <div><span class="badge-connection"><i class="fas fa-user mr-1"></i>Max 1 connection</span></div>
@@ -365,7 +397,7 @@
         <!-- LION -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Lion OTT" data-type="subscription" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">L</div>
+                <img src="lionott.webp" alt="Lion OTT - Premium IPTV Server" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3EL%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Lion OTT</h3>
             </div>
             <div><span class="badge-connection"><i class="fas fa-user mr-1"></i>Max 1 connection</span></div>
@@ -393,7 +425,7 @@
         <!-- CRYSTAL -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Crystal IPTV" data-type="subscription" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">Cr</div>
+                <img src="crystaliptv.webp" alt="Crystal IPTV - Premium 8K IPTV Server" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3ECr%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Crystal IPTV</h3>
             </div>
             <div><span class="badge-connection"><i class="fas fa-user mr-1"></i>Max 1 connection</span></div>
@@ -421,7 +453,7 @@
         <!-- NEXON -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Nexon IPTV" data-type="subscription" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">N</div>
+                <img src="nexoniptv.webp" alt="Nexon IPTV - Premium IPTV Server" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3EN%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Nexon IPTV</h3>
             </div>
             <div><span class="badge-connection"><i class="fas fa-user mr-1"></i>Max 1 connection</span></div>
@@ -449,7 +481,7 @@
         <!-- MAGNUM OTT (multi-connection) -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Magnum OTT" data-type="subscription" data-max-conn="5" data-base-prices='{"1":10,"3":19,"6":29,"12":39}'>
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">M</div>
+                <img src="magnumott.webp" alt="Magnum OTT - Premium Multi-Device IPTV Server" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3EM%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Magnum OTT</h3>
             </div>
             <div><span class="badge-connection badge-multi"><i class="fas fa-users mr-1"></i>Max 5 connections</span></div>
@@ -478,7 +510,7 @@
         <!-- MEGA OTT (multi-connection) -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Mega OTT" data-type="subscription" data-max-conn="3" data-base-prices='{"1":10,"3":19,"6":29,"12":39}'>
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">Mg</div>
+                <img src="megaott.webp" alt="Mega OTT - Premium Multi-Device IPTV Server" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3EMg%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Mega OTT</h3>
             </div>
             <div><span class="badge-connection badge-multi"><i class="fas fa-users mr-1"></i>Max 3 connections</span></div>
@@ -507,7 +539,7 @@
         <!-- INFINITY (multi-connection) -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Infinity IPTV" data-type="subscription" data-max-conn="2" data-base-prices='{"1":20,"3":40,"6":55,"12":75}'>
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">∞</div>
+                <img src="infinityiptv.webp" alt="Infinity IPTV - Premium 8K Multi-Device IPTV Server" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3E∞%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Infinity IPTV</h3>
             </div>
             <div><span class="badge-connection badge-multi"><i class="fas fa-users mr-1"></i>Max 2 connections</span></div>
@@ -536,7 +568,7 @@
         <!-- TREX IPTV -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Trex IPTV" data-type="subscription" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">T</div>
+                <img src="trexiptv.webp" alt="Trex IPTV - Premium IPTV Server with 38k+ Channels" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3ET%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Trex IPTV</h3>
             </div>
             <div><span class="badge-connection"><i class="fas fa-user mr-1"></i>Max 1 connection</span></div>
@@ -564,7 +596,7 @@
         <!-- 8K STRONG -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="8K Strong" data-type="subscription" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">8K</div>
+                <img src="8kstrong.webp" alt="8K Strong - Premium 8K IPTV Server" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3E8K%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">8K Strong</h3>
             </div>
             <div><span class="badge-connection"><i class="fas fa-user mr-1"></i>Max 1 connection</span></div>
@@ -592,7 +624,7 @@
         <!-- TIVIONE -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Tivione IPTV" data-type="subscription" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">Ti</div>
+                <img src="tivioneiptv.webp" alt="Tivione IPTV - Premium IPTV Server" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3ETi%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Tivione IPTV</h3>
             </div>
             <div><span class="badge-connection"><i class="fas fa-user mr-1"></i>Max 1 connection</span></div>
@@ -620,7 +652,7 @@
         <!-- ULTRA 8K -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Ultra 8K" data-type="subscription" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">U8</div>
+                <img src="ultra8k.webp" alt="Ultra 8K - Premium Enthusiast-Grade IPTV Server" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3EU8%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Ultra 8K</h3>
             </div>
             <div><span class="badge-connection"><i class="fas fa-user mr-1"></i>Max 1 connection</span></div>
@@ -648,7 +680,7 @@
         <!-- DREAM24K -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Dream 24K" data-type="subscription" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">D24</div>
+                <img src="dream24k.webp" alt="Dream 24K - Premium IPTV Server with 24K Quality" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3ED24%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Dream 24K</h3>
             </div>
             <div><span class="badge-connection"><i class="fas fa-user mr-1"></i>Max 1 connection</span></div>
@@ -697,7 +729,7 @@
         <!-- DINO Reseller -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Dino IPTV Reseller" data-type="reseller" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">D</div>
+                <img src="dinoiptv.webp" alt="Dino IPTV Reseller Panel" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3ED%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Dino IPTV</h3>
             </div>
             <div><span class="reseller-badge">Reseller Panel</span></div>
@@ -723,7 +755,7 @@
         <!-- LION Reseller -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Lion OTT Reseller" data-type="reseller" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">L</div>
+                <img src="lionott.webp" alt="Lion OTT Reseller Panel" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3EL%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Lion OTT</h3>
             </div>
             <div><span class="reseller-badge">Reseller Panel</span></div>
@@ -749,7 +781,7 @@
         <!-- CRYSTAL Reseller -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Crystal IPTV Reseller" data-type="reseller" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">Cr</div>
+                <img src="crystaliptv.webp" alt="Crystal IPTV Reseller Panel" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3ECr%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Crystal IPTV</h3>
             </div>
             <div><span class="reseller-badge">Reseller Panel</span></div>
@@ -775,7 +807,7 @@
         <!-- NEXON Reseller -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Nexon IPTV Reseller" data-type="reseller" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">N</div>
+                <img src="nexoniptv.webp" alt="Nexon IPTV Reseller Panel" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3EN%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Nexon IPTV</h3>
             </div>
             <div><span class="reseller-badge">Reseller Panel</span></div>
@@ -798,10 +830,10 @@
             </div>
         </div>
 
-        <!-- MAGNUM OTT Reseller (multi-connection) -->
+        <!-- MAGNUM OTT Reseller -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Magnum OTT Reseller" data-type="reseller" data-max-conn="5">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">M</div>
+                <img src="magnumott.webp" alt="Magnum OTT Reseller Panel" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3EM%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Magnum OTT</h3>
             </div>
             <div><span class="reseller-badge">Reseller Panel</span></div>
@@ -824,10 +856,10 @@
             </div>
         </div>
 
-        <!-- MEGA OTT Reseller (multi-connection) -->
+        <!-- MEGA OTT Reseller -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Mega OTT Reseller" data-type="reseller" data-max-conn="3">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">Mg</div>
+                <img src="megaott.webp" alt="Mega OTT Reseller Panel" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3EMg%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Mega OTT</h3>
             </div>
             <div><span class="reseller-badge">Reseller Panel</span></div>
@@ -850,10 +882,10 @@
             </div>
         </div>
 
-        <!-- INFINITY Reseller (multi-connection) -->
+        <!-- INFINITY Reseller -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Infinity IPTV Reseller" data-type="reseller" data-max-conn="2">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">∞</div>
+                <img src="infinityiptv.webp" alt="Infinity IPTV Reseller Panel" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3E∞%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Infinity IPTV</h3>
             </div>
             <div><span class="reseller-badge">Reseller Panel</span></div>
@@ -879,7 +911,7 @@
         <!-- TREX IPTV Reseller -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Trex IPTV Reseller" data-type="reseller" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">T</div>
+                <img src="trexiptv.webp" alt="Trex IPTV Reseller Panel" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3ET%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Trex IPTV</h3>
             </div>
             <div><span class="reseller-badge">Reseller Panel</span></div>
@@ -905,7 +937,7 @@
         <!-- 8K STRONG Reseller -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="8K Strong Reseller" data-type="reseller" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">8K</div>
+                <img src="8kstrong.webp" alt="8K Strong Reseller Panel" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3E8K%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">8K Strong</h3>
             </div>
             <div><span class="reseller-badge">Reseller Panel</span></div>
@@ -931,7 +963,7 @@
         <!-- TIVIONE Reseller -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Tivione IPTV Reseller" data-type="reseller" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">Ti</div>
+                <img src="tivioneiptv.webp" alt="Tivione IPTV Reseller Panel" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3ETi%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Tivione IPTV</h3>
             </div>
             <div><span class="reseller-badge">Reseller Panel</span></div>
@@ -957,7 +989,7 @@
         <!-- ULTRA 8K Reseller -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Ultra 8K Reseller" data-type="reseller" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">U8</div>
+                <img src="ultra8k.webp" alt="Ultra 8K Reseller Panel" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3EU8%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Ultra 8K</h3>
             </div>
             <div><span class="reseller-badge">Reseller Panel</span></div>
@@ -983,7 +1015,7 @@
         <!-- DREAM24K Reseller -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Dream 24K Reseller" data-type="reseller" data-max-conn="1">
             <div class="flex items-center gap-3 mb-1">
-                <div class="logo-placeholder">D24</div>
+                <img src="dream24k.webp" alt="Dream 24K Reseller Panel" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3ED24%3C/text%3E%3C/svg%3E'" />
                 <h3 class="text-lg font-bold text-white">Dream 24K</h3>
             </div>
             <div><span class="reseller-badge">Reseller Panel</span></div>
@@ -1060,7 +1092,10 @@
 <!-- ===== FOOTER ===== -->
 <footer class="border-t border-slate-800/50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-8">
     <div class="flex flex-wrap justify-between items-center gap-4">
-        <span class="text-xl font-extrabold gradient-text">8kstream.net</span>
+        <div class="flex items-center gap-3">
+            <img src="logo.webp" alt="8kstream.net - Premium IPTV Provider" class="h-8 w-auto max-w-[140px] object-contain" />
+            <span class="text-xl font-extrabold gradient-text">8kstream.net</span>
+        </div>
         <div class="flex gap-6 text-slate-400 text-sm">
             <a href="#" class="hover:text-purple-400 transition">Home</a>
             <a href="#pricing" class="hover:text-purple-400 transition">Pricing</a>
