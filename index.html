@@ -84,7 +84,8 @@
             border: 1px solid rgba(96, 165, 250, 0.25);
             color: #60a5fa;
         }
-        /* Product logo styling - .webp images */
+        /* ===== IMAGE SIZES ===== */
+        /* Product logo - recommended: 48x48px to 64x64px (webp) */
         .product-logo {
             width: 48px;
             height: 48px;
@@ -96,6 +97,31 @@
         }
         .product-logo:hover {
             border-color: #8b5cf6;
+        }
+        /* Hero video/gif - recommended: 600x400px to 800x500px */
+        .hero-video {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            aspect-ratio: 16/9;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            object-fit: cover;
+        }
+        /* Main logo - recommended: 180x50px to 220x60px (webp) */
+        .main-logo {
+            height: 40px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+        }
+        /* Footer logo - recommended: 140x40px (webp) */
+        .footer-logo {
+            height: 32px;
+            width: auto;
+            max-width: 140px;
+            object-fit: contain;
         }
         .feature-check {
             color: #8b5cf6;
@@ -222,6 +248,8 @@
             .modal-box { padding: 24px 18px; }
             .modal-contact-buttons { flex-direction: column; }
             .product-logo { width: 40px; height: 40px; }
+            .hero-video { max-width: 100%; }
+            .main-logo { height: 32px; max-width: 140px; }
         }
         .reseller-badge {
             background: linear-gradient(135deg, #8b5cf6, #60a5fa);
@@ -233,21 +261,6 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-
-        /* Hero video/gif styling */
-        .hero-video {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-        }
-        @media (max-width: 768px) {
-            .hero-video {
-                max-width: 100%;
-            }
-        }
     </style>
 </head>
 <body>
@@ -255,9 +268,9 @@
 <!-- ===== NAVBAR ===== -->
 <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 border-b border-slate-800/50">
     <div class="flex justify-between items-center">
-        <!-- Logo with SEO-friendly alt text -->
+        <!-- Main logo: 180x50px recommended (webp) -->
         <a href="#" class="flex items-center gap-3">
-            <img src="logo.webp" alt="8kstream.net - Premium IPTV Provider" class="h-10 w-auto max-w-[180px] object-contain" />
+            <img src="logo.webp" alt="8kstream.net - Premium IPTV Provider" class="main-logo" />
         </a>
         <div class="hidden md:flex items-center gap-8 text-slate-300 text-sm">
             <a href="#features" class="hover:text-purple-400 transition">Features</a>
@@ -296,9 +309,9 @@
                 <a href="#contact" class="btn-outline text-white font-semibold px-8 py-3.5 rounded-full"><i class="fab fa-whatsapp mr-2 text-green-400"></i>Free Trial</a>
             </div>
         </div>
-        <!-- Hero Video / GIF -->
+        <!-- Hero Video / GIF - recommended: 600x400px to 800x500px -->
         <div class="flex justify-center">
-            <video class="hero-video" autoplay muted loop playsinline>
+            <video class="hero-video" autoplay muted loop playsinline poster="hero-poster.webp">
                 <source src="hero-video.webm" type="video/webm">
                 <source src="hero-video.mp4" type="video/mp4">
                 <!-- Fallback GIF if video not supported -->
@@ -1093,7 +1106,8 @@
 <footer class="border-t border-slate-800/50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-8">
     <div class="flex flex-wrap justify-between items-center gap-4">
         <div class="flex items-center gap-3">
-            <img src="logo.webp" alt="8kstream.net - Premium IPTV Provider" class="h-8 w-auto max-w-[140px] object-contain" />
+            <!-- Footer logo: 140x40px recommended (webp) -->
+            <img src="logo.webp" alt="8kstream.net - Premium IPTV Provider" class="footer-logo" />
             <span class="text-xl font-extrabold gradient-text">8kstream.net</span>
         </div>
         <div class="flex gap-6 text-slate-400 text-sm">
