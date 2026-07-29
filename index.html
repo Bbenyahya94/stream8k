@@ -343,6 +343,22 @@
             color: #e2e8f0;
             transform: scale(1.05);
         }
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(139, 92, 246, 0.08);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #8b5cf6;
+            transition: all 0.3s;
+        }
+        .feature-card:hover .feature-icon {
+            background: rgba(139, 92, 246, 0.2);
+            transform: scale(1.1) rotate(-5deg);
+        }
         @media (max-width: 768px) {
             .stat-number { font-size: 2.2rem; }
             .modal-box { padding: 24px 18px; }
@@ -351,6 +367,7 @@
             .hero-video { max-width: 100%; }
             .main-logo { height: 30px; max-width: 130px; }
             .info-grid { grid-template-columns: 1fr 1fr; }
+            .feature-icon { width: 44px; height: 44px; font-size: 18px; }
         }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #06080e; }
@@ -363,8 +380,22 @@
             position: absolute;
             border-radius: 50%;
             filter: blur(80px);
-            opacity: 0.15;
+            opacity: 0.12;
             pointer-events: none;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
         }
     </style>
 </head>
@@ -460,37 +491,37 @@
 <section id="features" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
     <div class="text-center mb-14">
         <span class="inline-block bg-purple-500/10 text-purple-300 text-xs font-semibold px-4 py-1 rounded-full mb-3"><i class="fas fa-star"></i> Why Choose 8kstream</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-white">Built <span class="gradient-text">different</span></h2>
-        <p class="text-slate-400 max-w-2xl mx-auto mt-2">Everything you expect from a premium streaming service — and everything you didn't know you needed.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white section-title">Built <span class="gradient-text">different</span></h2>
+        <p class="text-slate-400 max-w-2xl mx-auto mt-6">Everything you expect from a premium streaming service — and everything you didn't know you needed.</p>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
-        <div class="card-glass rounded-2xl p-6 text-center">
-            <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-tv text-2xl text-purple-400"></i></div>
+        <div class="card-glass rounded-2xl p-6 text-center feature-card">
+            <div class="feature-icon mx-auto mb-4"><i class="fas fa-tv"></i></div>
             <h3 class="text-lg font-bold text-white">50,000+ Live Channels</h3>
             <p class="text-slate-400 text-sm mt-1">Sports, news, movies, kids, premium — covering 100+ countries in every major language. USA, UK, Canada, Europe, Balkan.</p>
         </div>
-        <div class="card-glass rounded-2xl p-6 text-center">
-            <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-film text-2xl text-purple-400"></i></div>
+        <div class="card-glass rounded-2xl p-6 text-center feature-card">
+            <div class="feature-icon mx-auto mb-4"><i class="fas fa-film"></i></div>
             <h3 class="text-lg font-bold text-white">160,000+ VOD Library</h3>
             <p class="text-slate-400 text-sm mt-1">Latest movies, full series box-sets and exclusive content updated daily — no Netflix needed. All genres included.</p>
         </div>
-        <div class="card-glass rounded-2xl p-6 text-center">
-            <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-devices text-2xl text-purple-400"></i></div>
+        <div class="card-glass rounded-2xl p-6 text-center feature-card">
+            <div class="feature-icon mx-auto mb-4"><i class="fas fa-devices"></i></div>
             <h3 class="text-lg font-bold text-white">Multi-device Support</h3>
             <p class="text-slate-400 text-sm mt-1">Smart TV, Firestick, iOS, Android, Mac, PC, MAG, Formuler, Enigma2 — all supported with one subscription.</p>
         </div>
-        <div class="card-glass rounded-2xl p-6 text-center">
-            <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-signal text-2xl text-purple-400"></i></div>
+        <div class="card-glass rounded-2xl p-6 text-center feature-card">
+            <div class="feature-icon mx-auto mb-4"><i class="fas fa-signal"></i></div>
             <h3 class="text-lg font-bold text-white">4K &amp; HD Streaming</h3>
             <p class="text-slate-400 text-sm mt-1">Crystal-clear picture with adaptive bitrate. Watch in 4K UHD, FHD or HD with no quality drops. Anti-freeze technology.</p>
         </div>
-        <div class="card-glass rounded-2xl p-6 text-center">
-            <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-server text-2xl text-purple-400"></i></div>
+        <div class="card-glass rounded-2xl p-6 text-center feature-card">
+            <div class="feature-icon mx-auto mb-4"><i class="fas fa-server"></i></div>
             <h3 class="text-lg font-bold text-white">Fast &amp; Stable Servers</h3>
             <p class="text-slate-400 text-sm mt-1">99.9% uptime, low-latency CDNs across 5 continents. Zero buffering, even during peak hours. Optimized for global audience.</p>
         </div>
-        <div class="card-glass rounded-2xl p-6 text-center">
-            <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-headset text-2xl text-purple-400"></i></div>
+        <div class="card-glass rounded-2xl p-6 text-center feature-card">
+            <div class="feature-icon mx-auto mb-4"><i class="fas fa-headset"></i></div>
             <h3 class="text-lg font-bold text-white">24/7 Live Support</h3>
             <p class="text-slate-400 text-sm mt-1">Real humans on WhatsApp, live chat and email — ready to help you set up and troubleshoot in multiple languages.</p>
         </div>
@@ -501,8 +532,8 @@
 <section id="info" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-y border-slate-800/30">
     <div class="text-center mb-12">
         <span class="inline-block bg-purple-500/10 text-purple-300 text-xs font-semibold px-4 py-1 rounded-full mb-3"><i class="fas fa-info-circle"></i> IPTV Knowledge Base</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-white">Everything You Need to Know About <span class="gradient-text">IPTV</span></h2>
-        <p class="text-slate-400 max-w-2xl mx-auto mt-2">Comprehensive information about IPTV technology, benefits, setup, and why 8kstream is the best choice.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white section-title">Everything You Need to Know About <span class="gradient-text">IPTV</span></h2>
+        <p class="text-slate-400 max-w-2xl mx-auto mt-6">Comprehensive information about IPTV technology, benefits, setup, and why 8kstream is the best choice.</p>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -621,8 +652,8 @@
 <section id="pricing" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="text-center mb-14">
         <span class="inline-block bg-purple-500/10 text-purple-300 text-xs font-semibold px-4 py-1 rounded-full mb-3"><i class="fas fa-tag"></i> Subscription Plans</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-white">8kstream <span class="gradient-text">pricing</span></h2>
-        <p class="text-slate-400 max-w-2xl mx-auto mt-2">Choose your server and plan. All include 24/7 support, anti‑freeze &amp; 8K/FHD quality. Optimized for USA, Canada, UK, Europe &amp; Balkan.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white section-title">8kstream <span class="gradient-text">pricing</span></h2>
+        <p class="text-slate-400 max-w-2xl mx-auto mt-6">Choose your server and plan. All include 24/7 support, anti‑freeze &amp; 8K/FHD quality. Optimized for USA, Canada, UK, Europe &amp; Balkan.</p>
     </div>
     <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
 
@@ -972,8 +1003,8 @@
 <section id="reseller" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-y border-slate-800/30">
     <div class="text-center mb-12">
         <span class="inline-block bg-purple-500/10 text-purple-300 text-xs font-semibold px-4 py-1 rounded-full mb-3"><i class="fas fa-store"></i> Reseller Program</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-white">Start <span class="gradient-text">Reselling</span> Today</h2>
-        <p class="text-slate-400 max-w-2xl mx-auto mt-2">Get wholesale pricing, your own panel, and 24/7 support. Build a recurring income stream with our premium IPTV servers.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white section-title">Start <span class="gradient-text">Reselling</span> Today</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto mt-6">Get wholesale pricing, your own panel, and 24/7 support. Build a recurring income stream with our premium IPTV servers.</p>
     </div>
 
     <div class="grid md:grid-cols-4 gap-4 text-center mb-12">
@@ -1147,7 +1178,7 @@
             </div>
         </div>
 
-        <!-- LION Reseller - 10, 20, 30, 50, 100 credits -->
+        <!-- LION Reseller -->
         <div class="pricing-card rounded-2xl p-5 relative flex flex-col" data-server="Lion OTT Reseller" data-type="reseller" data-max-conn="1" data-reseller-prices='{"10":79,"20":150,"30":210,"50":330,"100":600}'>
             <div class="flex items-center gap-3 mb-1">
                 <img src="lionott.webp" alt="Lion OTT Reseller Panel" class="product-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect width=%2248%22 height=%2248%22 fill=%22%231f2a3a%22 rx=%2224%22/%3E%3Ctext x=%2224%22 y=%2232%22 text-anchor=%22middle%22 fill=%22%23cbd5e1%22 font-size=%2220%22 font-weight=%22700%22 font-family=%22Inter%22%3EL%3C/text%3E%3C/svg%3E'" />
@@ -1331,8 +1362,8 @@
 <section id="reviews" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="text-center mb-12">
         <span class="inline-block bg-purple-500/10 text-purple-300 text-xs font-semibold px-4 py-1 rounded-full mb-3"><i class="fas fa-star"></i> Testimonials</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-white">Loved by viewers <span class="gradient-text">worldwide</span></h2>
-        <p class="text-slate-400">Over 80,000 happy customers across USA, Canada, UK, Europe &amp; Balkan trust 8kstream every day.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white section-title">Loved by viewers <span class="gradient-text">worldwide</span></h2>
+        <p class="text-slate-400 mt-6">Over 80,000 happy customers across USA, Canada, UK, Europe &amp; Balkan trust 8kstream every day.</p>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
         <div class="card-glass rounded-2xl p-6">
@@ -1356,8 +1387,8 @@
 <!-- ===== CONTACT ===== -->
 <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
     <div class="card-glass rounded-3xl p-10 md:p-16 border border-purple-500/20">
-        <h2 class="text-3xl md:text-4xl font-bold text-white">Ready to start watching <span class="gradient-text">8kstream?</span></h2>
-        <p class="text-slate-400 max-w-lg mx-auto mt-2">Get instant activation by ordering directly on WhatsApp — our team replies in minutes, 24/7. Serving USA, Canada, UK, Europe &amp; Balkan.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white section-title">Ready to start watching <span class="gradient-text">8kstream?</span></h2>
+        <p class="text-slate-400 max-w-lg mx-auto mt-6">Get instant activation by ordering directly on WhatsApp — our team replies in minutes, 24/7. Serving USA, Canada, UK, Europe &amp; Balkan.</p>
         <div class="flex flex-wrap justify-center gap-4 mt-8">
             <a href="https://wa.me/212670969192" target="_blank" class="btn-whatsapp text-white font-semibold px-10 py-3.5 rounded-full shadow-lg shadow-green-600/25"><i class="fab fa-whatsapp mr-2"></i>Order Now on WhatsApp</a>
             <a href="#" class="btn-outline text-white font-semibold px-10 py-3.5 rounded-full">Pay Online <i class="fas fa-arrow-right ml-2"></i></a>
