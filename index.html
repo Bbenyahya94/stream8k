@@ -160,7 +160,7 @@
             transition: all 0.3s;
         }
         .product-logo:hover { border-color: #8b5cf6; transform: scale(1.08) rotate(-5deg); }
-        .hero-video {
+        .hero-image {
             width: 100%;
             max-width: 620px;
             height: auto;
@@ -169,6 +169,7 @@
             border: 1px solid rgba(255, 255, 255, 0.06);
             box-shadow: 0 40px 100px rgba(0,0,0,0.7);
             object-fit: cover;
+            display: block;
         }
         .main-logo { height: 44px; width: auto; max-width: 200px; object-fit: contain; }
         .footer-logo { height: 34px; width: auto; max-width: 150px; object-fit: contain; }
@@ -364,7 +365,7 @@
             .modal-box { padding: 24px 18px; }
             .modal-contact-buttons { flex-direction: column; }
             .product-logo { width: 40px; height: 40px; }
-            .hero-video { max-width: 100%; }
+            .hero-image { max-width: 100%; }
             .main-logo { height: 30px; max-width: 130px; }
             .info-grid { grid-template-columns: 1fr 1fr; }
             .feature-icon { width: 44px; height: 44px; font-size: 18px; }
@@ -468,11 +469,8 @@
             </div>
         </div>
         <div class="flex justify-center">
-            <video class="hero-video" autoplay muted loop playsinline poster="hero-poster.webp">
-                <source src="hero-video.webm" type="video/webm">
-                <source src="hero.gif" type="video/mp4">
-                <img src="hero.gif" alt="8kstream IPTV - Premium Streaming Experience" class="hero-video" />
-            </video>
+            <!-- Hero GIF / Image - uses hero.gif directly -->
+            <img src="hero.gif" alt="8kstream IPTV - Premium Streaming Experience" class="hero-image" />
         </div>
     </div>
 </section>
