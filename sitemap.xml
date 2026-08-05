@@ -18,8 +18,8 @@
   <url><loc>https://8kstream.net/iptv-guide</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://8kstream.net/server-directory</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://8kstream.net/faq</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://8kstream.net/about.html</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://8kstream.net/contact.html</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://8kstream.net/privacy.html</loc><lastmod>2026-08-04</lastmod><priority>0.3</priority></url>
-  <url><loc>https://8kstream.net/terms.html</loc><lastmod>2026-08-04</lastmod><priority>0.3</priority></url>
+  <url><loc>https://8kstream.net/about</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://8kstream.net/contact</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://8kstream.net/privacy</loc><lastmod>2026-08-05</lastmod><priority>0.3</priority></url>
+  <url><loc>https://8kstream.net/terms</loc><lastmod>2026-08-05</lastmod><priority>0.3</priority></url>
 </urlset>
