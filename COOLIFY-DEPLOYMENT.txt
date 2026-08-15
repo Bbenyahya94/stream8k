@@ -1,0 +1,30 @@
+8KStream Coolify deployment
+===========================
+
+Upload every file in this package to the root of the Git repository.
+
+Coolify settings
+----------------
+Build Pack: Nixpacks
+Base Directory: /
+Is it a static site?: Disabled
+Ports Exposes: 3000
+Start Command: npm start
+Domain destination port: 3000
+
+Runtime
+-------
+nixpacks.toml selects Node.js 20.
+package.json starts the dependency-free server with node server.js.
+server.js listens on 0.0.0.0 and process.env.PORT, with 3000 as the fallback.
+
+Expected route checks
+---------------------
+/                          200
+/subscription              200
+/reseller                  200
+/subscription.html         301 to /subscription
+/reseller.html             301 to /reseller
+/any-missing-page          404 with the custom 404 design
+
+After deployment, purge the Cloudflare cache so old HTML, redirects and 404 responses are not reused.

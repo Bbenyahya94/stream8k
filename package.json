@@ -1,0 +1,12 @@
+{
+  "name": "8kstream-static-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free Node.js server for the 8KStream static website.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

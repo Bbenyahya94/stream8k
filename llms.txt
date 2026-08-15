@@ -1,0 +1,11 @@
+# 8KStream
+
+> Independent comparison and customer-support website for IPTV subscriptions, multi-connection plans and reseller panels. 8KStream is the website brand, not an IPTV server.
+
+- Website: https://8kstream.net/
+- Subscriptions: https://8kstream.net/subscription
+- Reseller panels: https://8kstream.net/reseller
+- About: https://8kstream.net/about
+- Contact: https://8kstream.net/contact
+- Support email: support@8kstream.net
+- Last reviewed: 2026-08-15

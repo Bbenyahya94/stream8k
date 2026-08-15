@@ -1,0 +1,30 @@
+<svg viewBox="0 0 1200 580" class="relative h-auto w-full" role="img" aria-labelledby="worldMapTitle worldMapDesc">
+            <title id="worldMapTitle">8KStream global service map</title><desc id="worldMapDesc">Decorative world map showing connected service regions across the Americas, Europe, Africa, Asia, and Oceania.</desc>
+            <defs><linearGradient id="landGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8B5CF6" stop-opacity=".38"></stop><stop offset=".52" stop-color="#06B6D4" stop-opacity=".25"></stop><stop offset="1" stop-color="#10B981" stop-opacity=".22"></stop></linearGradient><filter id="nodeGlow"><feGaussianBlur stdDeviation="5" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs>
+            <g fill="url(#landGradient)" stroke="#67e8f9" stroke-opacity=".18" stroke-width="2">
+              <path d="M84 126l74-61 105 7 58 42 64 14 27 47-35 38-55 6-36 44-28 72-43 21-25-44-54-36-22-65-47-28z"></path>
+              <path d="M321 344l53 24 40 57-12 71-37 59-29-30-10-77-34-62z"></path>
+              <path d="M492 118l62-34 95 15 40 38-31 30-70-7-51 26-49-20z"></path>
+              <path d="M535 207l70-14 57 38 32 86-22 97-45 91-38-21-17-78-46-55-21-74z"></path>
+              <path d="M683 119l94-42 155 16 108 44 79 75-46 35-85-8-54 35-74-24-41 40-65-15-31-54-68-20z"></path>
+              <path d="M901 293l64 1 32 35-18 53-51 22-37-36z"></path>
+              <path d="M990 420l70-17 61 35-18 50-75 18-53-39z"></path>
+              <path d="M1125 513l30-9 19 18-26 18z"></path>
+            </g>
+            <g fill="none" stroke-linecap="round" class="map-routes">
+              <path d="M220 205 Q435 45 594 151" stroke="#8B5CF6" stroke-opacity=".55" stroke-width="2"></path>
+              <path d="M594 151 Q760 45 903 205" stroke="#06B6D4" stroke-opacity=".55" stroke-width="2"></path>
+              <path d="M594 151 Q625 265 625 344" stroke="#10B981" stroke-opacity=".5" stroke-width="2"></path>
+              <path d="M594 151 Q815 320 1024 453" stroke="#06B6D4" stroke-opacity=".45" stroke-width="2"></path>
+              <path d="M220 205 Q430 370 625 344" stroke="#8B5CF6" stroke-opacity=".4" stroke-width="2"></path>
+            </g>
+            <g filter="url(#nodeGlow)" class="map-nodes">
+              <g transform="translate(220 205)"><circle r="16" fill="#8B5CF6" opacity=".16"></circle><circle r="6" fill="#c4b5fd"></circle><text y="31" text-anchor="middle" fill="#cbd5e1" font-size="13">USA &amp; Canada</text></g>
+              <g transform="translate(558 143)"><circle r="14" fill="#8B5CF6" opacity=".16"></circle><circle r="5" fill="#c4b5fd"></circle><text y="-19" text-anchor="middle" fill="#cbd5e1" font-size="13">UK</text></g>
+              <g transform="translate(622 166)"><circle r="16" fill="#06B6D4" opacity=".16"></circle><circle r="6" fill="#67e8f9"></circle><text y="31" text-anchor="middle" fill="#cbd5e1" font-size="13">Europe</text></g>
+              <g transform="translate(684 185)"><circle r="13" fill="#06B6D4" opacity=".16"></circle><circle r="5" fill="#67e8f9"></circle><text y="-18" text-anchor="middle" fill="#cbd5e1" font-size="13">Balkan</text></g>
+              <g transform="translate(625 344)"><circle r="14" fill="#10B981" opacity=".16"></circle><circle r="5" fill="#6ee7b7"></circle><text y="29" text-anchor="middle" fill="#cbd5e1" font-size="13">Africa</text></g>
+              <g transform="translate(903 205)"><circle r="15" fill="#06B6D4" opacity=".16"></circle><circle r="6" fill="#67e8f9"></circle><text y="30" text-anchor="middle" fill="#cbd5e1" font-size="13">Asia</text></g>
+              <g transform="translate(1024 453)"><circle r="13" fill="#10B981" opacity=".16"></circle><circle r="5" fill="#6ee7b7"></circle><text y="28" text-anchor="middle" fill="#cbd5e1" font-size="13">Oceania</text></g>
+            </g>
+          </svg>
